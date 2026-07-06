@@ -1,0 +1,57 @@
+.hero-image {
+    width: 100%;
+    min-height: 700px;
+    height: auto;
+    text-align: left;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-image: url("../../images/bg.png");
+    background-size: cover;
+    background-position: center 75%;
+    background-repeat: no-repeat;
+}
+
+.txt-header{
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    margin-top: 100px;
+    font-family: 'Poppins', sans-serif;
+}
+.txt2-label{
+    font-size: 20px;
+    color: rgb(44, 128, 224);
+
+    
+}
+.txt-description{
+    font-size: 15px;
+    max-width: 600px;
+
+    color: white;
+}
+
+
+
+/* Container to hold personal logo and name */
+.peaks-label{
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+}
+/* PV logo width and height */
+.PV-logo{
+    width: 75px;
+    height: 75px; 
+    
+}
+
+.logo-name-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+}
+

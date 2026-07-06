@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+            <!--Linke to fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Emblema+One&family=Krona+One&family=Montenegrin+Gothic+One&family=Oswald:wght@200..700&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/CSS/ContactPageCSS/body-content.css">
+    <link rel="stylesheet" href="/CSS/ContactPageCSS/cards.css">
+    <link rel="stylesheet" href="/CSS/ContactPageCSS/images.css">
+    <link rel="stylesheet" href="/CSS/ContactPageCSS/buttons.css">
+    <link rel="stylesheet" href="/CSS/ContactPageCSS/bars.css">
+    <link rel="stylesheet" href="/CSS/ContactPageCSS/cards-responsive.css">
+    <link rel="stylesheet" href="/CSS/ContactPageCSS/buttons-responsive.css">
+    <link rel="stylesheet" href="/CSS/ContactPageCSS/mobile-btn-responsive.css">
+    <link rel="stylesheet" href="/CSS/ContactPageCSS/mobile-btn.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+        <!--Container to hold logo and name-->
+    <div class="logo-name-container">
+        
+<!--Sends the user home if they click the logo-->
+    <a th:href="@{/}">
+        <img th:src="@{/images/PV logo.png}" class="PV-logo">
+    </a>
+
+        <h1 class="peaks-label">PEAKSVALO</h1>
+
+
+
+            <!-- ==== Container for all nav button ==== -->
+    <div class="nav-button-container">
+        <!--Link to go to the home view-->
+        <a th:href="@{/}" class="home-btn">Home</a>
+
+        <!--Link to go to the about view-->
+        <a th:href="@{/about}" class="about-btn">About</a>
+
+        <!--Link to go to the contact view-->
+        <a th:href="@{/contact}" class="contact-btn">Contact</a>
+
+        <!--Link to go to the connect view-->
+        <a th:href="@{/connect}" class="connect-btn">Connect</a>
+
+        <!--Button to download resume-->
+        <button class="download-resume-btn">Download Resume</button>
+    </div>
+
+        <!--MOBILE button-->
+    <button class="hamburger-btn" id="hamburger-btn">
+    <span class="icon">
+        <svg viewBox="0 0 175 80" width="40" height="40">
+            <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+            <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+            <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+        </svg>
+    </span>
+    <span class="text">MENU</span>
+</button>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="index.html">Home</a>
+        <a href="about-page.html">About</a>
+        <a href="contact-page.html">Contact</a>
+        <a href="connect.html">Connect</a>
+    </div>
+
+
+
+    <!-- ==== END of the CONTAINER that started at "logo-name-container" ==== -->
+    </div>
+
+
+
+    <!-- Main Contact Section -->
+    <div class="card-content">
+
+        <div class="contact-card">
+
+            <!-- Header -->
+            <h1 class="header" style="font-family: 'Poppins', sans-serif;">
+                Let's <span class="connect-header">Connect</span>
+
+                <p class="sub-tag" style="font-weight: 200">
+                    Feel free to reach out or check out my work.
+                </p>
+            </h1>
+
+            <!-- Email Card -->
+            <a href="mailto:jwiser.dev@gmail.com"
+               target="_blank"
+               class="card-one">
+
+                <div class="circle">
+                    <img src="images/message.png" class="email-img">
+                </div>
+
+                <div class="text-wrap">
+                    <p class="linkedin-tag" style="padding-left: 10px; font-weight: bold; font-family: 'Poppins', sans-serif;">
+                        Email
+                    </p>
+
+                    <p style="padding-left: 10px;">
+                        Email Me
+                    </p>
+                </div>
+
+            </a>
+
+            <!-- Phone Card -->
+            <a href="tel:4258797310"
+               target="_blank"
+               class="card-one">
+
+                <div class="circle-two">
+                    <img src="images/call.png" class="phone-img">
+                </div>
+
+                <div class="text-wrap">
+                    <p class="linkedin-tag" style="padding-left: 10px; font-weight: bold; font-family: 'Poppins', sans-serif;">
+                        Phone
+                    </p>
+
+                    <p style="padding-left: 10px;">
+                        Contact Me
+                    </p>
+                </div>
+
+            </a>
+
+            <!-- GitHub Card -->
+            <a href="https://github.com/PeakValo05"
+               target="_blank"
+               class="card-one">
+
+                <div class="circle-three">
+                    <img src="images/github.png" class="linkedin-img">
+                </div>
+
+                <div class="text-wrap">
+                    <p class="linkedin-tag" style="padding-left: 10px; font-weight: bold; font-family: 'Poppins', sans-serif;">
+                        GitHub
+                    </p>
+
+                    <p style="padding-left: 10px;">
+                        View Profile
+                    </p>
+                </div>
+
+            </a>
+
+            <!-- LinkedIn Card -->
+            <a href="https://www.linkedin.com/in/jackson-wiser-9a13a2256/"
+               target="_blank"
+               class="card-one">
+
+                <div class="circle-four">
+                    <img src="images/linkedin.png" class="linkedin-img">
+                </div>
+
+                <div class="text-wrap">
+                    <p class="linkedin-tag" style="padding-left: 10px; font-weight: bold; font-family: 'Poppins', sans-serif;">
+                        LinkedIn
+                    </p>
+
+                    <p style="padding-left: 10px;">
+                        View Profile
+                    </p>
+                </div>
+
+            </a>
+
+            <!-- Closing Message -->
+
+            <!--Container to wrap projects button and text-->
+             <div class="text-button-container">
+
+                <p style="color: white; font-family: 'Dancing Script', cursive; font-size: 20px;">
+                    Looking forward to hearing from you
+                </p>
+                
+                <!--Button to the projects view-->
+                <button class="projects-btn">Projects</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+
+        <p class="notice-label" style="color: white">
+            © 2026 Jackson Wiser. All Rights Reserved.
+        </p>
+
+
+
+
+
+
+    <!-- Hamburger Menu Script -->
+    <script>
+const burger = document.getElementById("hamburger-btn");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+burger.addEventListener("click", () => {
+    console.log("clicked");
+    mobileMenu.classList.toggle("active");
+});
+    </script>
+
+</body>
+
+</html>

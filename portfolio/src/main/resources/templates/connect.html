@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+
+        <!--Linke to fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Emblema+One&family=Krona+One&family=Montenegrin+Gothic+One&family=Oswald:wght@200..700&family=Pacifico&display=swap" rel="stylesheet">
+
+
+  
+
+    <link rel="stylesheet" href="/CSS/ConnectCSS/buttons.css">
+    <link rel="stylesheet" href="/CSS/ConnectCSS/buttons-responsive.css">
+    <link rel="stylesheet" href="/CSS/ConnectCSS/body-content.css">
+    <link rel="stylesheet" href="/CSS/ConnectCSS/cards.css">
+    <link rel="stylesheet" href="/CSS/ConnectCSS/bars.css">
+    <link rel="stylesheet" href="/CSS/ConnectCSS/cards-responsive.css">
+    <link rel="stylesheet" href="/CSS/ConnectCSS/body-content-responsive.css">
+    <link rel="stylesheet" href="/CSS/ConnectCSS/bars-responsive.css">
+    <link rel="stylesheet" href="/CSS/ConnectCSS/buttons-responsive.css">
+    <link rel="stylesheet" href="/CSS/ConnectCSS/mobile-btn.css">
+</head>
+
+<body>
+
+
+                <!--Container to hold logo and name-->
+    <div class="logo-name-container">
+
+        <!--Sends the user home if they click the logo-->
+    <a th:href="@{/}">
+        <img th:src="@{/images/PV logo.png}" class="PV-logo">
+    </a>
+        <h1 class="peaks-label">PEAKSVALO</h1>
+
+
+
+            <!-- ==== Container for all nav button ==== -->
+    <div class="nav-button-container">
+        <a th:href="@{/}" class="home-btn">Home</a>
+        <a th:href="@{/about}" class="about-btn">About</a>
+        <a th:href="@{/contact}" class="contact-btn">Contact</a>
+        <a th:href="@{/connect}" class="connect-btn">Connect</a>
+        <button class="download-resume-btn">Download Resume</button>
+    
+    </div>
+    <!--MOBILE button-->
+    <button class="hamburger-btn" id="hamburger-btn">
+    <span class="icon">
+        <svg viewBox="0 0 175 80" width="40" height="40">
+            <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+            <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+            <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+        </svg>
+    </span>
+    <span class="text">MENU</span>
+</button>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a th:href="@{/}">Home</a>
+        <a th:href="@{/about}">About</a>
+        <a th:href="@{/contact}">Contact</a>
+        <a th:href="@{/connect}">Connect</a>
+    </div>
+
+
+
+    </div>
+
+
+
+
+    <div class="text-header">
+        <h1 style="padding-left: 30px; font-size: 70px; color: white;">
+            Let's<br>
+            <span style="color: #007bff;">Connect!</span>
+        </h1>
+
+        <p style="padding-left: 30px; font-size: 20px; font-weight: 100; color: white" class="connect-description;">
+            I'm always open to discussing new opportunities,<br>
+            collaborating on exciting projects, or just having a<br>
+            chat about technology!
+        </p>
+    </div>
+
+    <div class="body-content">
+
+        <div class="card-content">
+
+            <!-- LEFT CARD -->
+            <div class="card">
+
+                <h1 style="padding-left: 20px; font-size: 24px;">My Contact Information</h1>
+                <div class="divider"></div>
+
+                <div class="contact-item">
+                
+                    <h3 style="padding-left: 20px; font-size: 20px;">Email Me</h3>
+                    <a href="mailto:jwiser.dev@gmail.com" class="email-subtag" style="padding-left: 20px;">
+                        jwiser.dev@gmail.com
+                    </a>
+                    <p style="color: black; font-weight: 100; padding-left: 20px;">Feel free to reach out!</p>
+                </div>
+
+                <div class="divider-container" style="display: flex; justify-content: center; align-items: center;">
+                    <hr style="border: 1px solid #94979b; width: 80%;">
+                </div>
+
+                <div class="contact-item">
+                    <h3 style="padding-left: 20px; font-size: 20px;">LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/jackson-wiser-9a13a2256/" target="_blank" class="linkedin-subtag" style="padding-left: 20px;">
+                        linkedin.com/in/jackson-wiser
+                    </a>
+                    <p style="color: black; font-weight: 100; padding-left: 20px;">Connect with me on LinkedIn!</p>
+                </div>
+
+                <div class="divider-container" style="display: flex; justify-content: center; align-items: center;">
+                    <hr style="border: 1px solid #94979b; width: 80%;">
+                </div>
+
+                <div class="contact-item">
+                    <h3 style="padding-left: 20px; font-size: 20px;">Message Me</h3>
+                    <a href="tel:4258797310" class="phone-subtag" style="padding-left: 20px;">
+                        (425) 879-7310
+                    </a>
+                    <p style="color: black; font-weight: 100; padding-left: 20px;">Shoot me a text or give me a call!</p>
+                </div>
+
+                <div class="divider-container" style="display: flex; justify-content: center; align-items: center;">
+                    <hr style="border: 1px solid #94979b; width: 80%;">
+                </div>
+
+                <div class="contact-item">
+                    <h3 style="padding-left: 20px; font-size: 20px;">Education</h3>
+                    <a href="https://www.gcu.edu/" target="_blank" class="education-subtag" style="padding-left: 20px;">
+                        Grand Canyon University
+                    </a>
+                    <p style="color: black; font-weight: 100; padding-left: 20px;">
+                        Pursuing a Bachelor's in Software Development
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- MIDDLE CARD -->
+            <div class="main-card-content">
+
+                <div class="main-card">
+
+                    <img src="images/paper-plane.png" alt="Paper Plane Image" class="paper-plane-image">
+
+                    <h1 class="sub-text"><span class="em-dash">——</span> Let's Build Something Great Together <span class="em-dash">——</span></h1>
+
+                    <div class="divider" style="margin: 20px 0;"></div>
+
+                    <p style="font-size: 18px; font-weight: 100; text-align: center;">
+                        I'm currently looking for new opportunities where I can<br>
+                        contribute, learn, and grow as a developer. If you have a<br>
+                        project in mind or just want to connect, I'd love to hear<br>
+                        from you!
+                    </p>
+
+                    <a href="mailto:jwiser.dev@gmail.com" class="btn-email">
+                        Email Me
+                        <img src="images/white-email.png" alt="Email Icon" class="email-icon" width="20" height="20">
+                    </a>
+
+                    <div class="divider" style="margin: 20px 0;"></div>
+
+                    <p>____ Connect with me on ____</p>
+
+                    <div class="social-container">
+
+                        <a href="https://www.linkedin.com/in/jackson-wiser-9a13a2256/" target="_blank" class="linkedin">
+                            <img src="images/linkedin.png" alt="LinkedIn">
+
+          
+                            <div>
+                                <b class="linkedin-text">LinkedIn</b>
+                                <p class="connect-text">Let's Connect</p>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/PeakValo05" target="_blank" class="github">
+                            <img src="images/github.png" alt="GitHub">
+
+                            <div>
+                                <b class="github-text">GitHub</b>
+                                <p class="connect-text">Let's Connect</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!--Projects button-->
+                    <button class="projects-btn">Projects</button>
+                </div>
+
+            </div>
+
+            
+
+            <!-- RIGHT CARD -->
+            <div class="card">
+
+                <h1 style="padding-left: 20px; font-size: 24px;">Available For</h1>
+                <div class="divider"></div>
+
+                <div class="contact-item">
+                    <h3 style="padding-left: 20px; font-size: 20px;">Opportunities</h3>
+                    <p style="color: black; font-weight: 100; padding-left: 20px;">
+                        Entry-level developer roles, internships, freelance projects, and networking.
+                    </p>
+                </div>
+
+                <div class="divider-container" style="display: flex; justify-content: center; align-items: center;">
+                    <hr style="border: 1px solid #94979b; width: 80%;">
+                </div>
+
+                <div class="contact-item">
+                    <h3 style="padding-left: 20px; font-size: 20px;">Tech Stack</h3>
+                    <p style="color: black; font-weight: 100; padding-left: 20px;">
+                        Java, Spring Boot, SQL, MongoDB, HTML, CSS, JavaScript, Git, and GitHub.
+                    </p>
+                </div>
+
+                <div class="divider-container" style="display: flex; justify-content: center; align-items: center;">
+                    <hr style="border: 1px solid #94979b; width: 80%;">
+                </div>
+
+                <div class="contact-item">
+                    <h3 style="padding-left: 20px; font-size: 20px;">Currently</h3>
+                    <p style="color: black; font-weight: 100; padding-left: 20px;">
+                        Building portfolio projects and growing as a software developer.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="quote-footer">
+
+                <div class="block-container">
+                    <div class="block-quote">
+                        <img src="images/quote.png" class="quote-icon" alt="Quote Icon">
+                    </div>
+                </div>
+
+                <p style="font-style: italic; margin: 0;">
+                    "The only way to do great work is to love what you do."
+                </p>
+
+                <p style="margin: 0;">- Steve Jobs</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Hamburger Menu Script -->
+    <script>
+        const burger = document.getElementById("hamburger-btn");
+        const mobileMenu = document.querySelector(".mobile-menu");
+
+        burger.addEventListener("click", () => {
+        console.log("clicked");
+        mobileMenu.classList.toggle("active");
+});
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+/* Container for all nav buttons */
+.nav-button-container{
+    display: flex;
+    margin-left: auto;
+    gap: 60px;
+    padding-right: 200px;
+   
+}
+.about-btn, .connect-btn, .contact-btn, .home-btn{
+    font-size: 20px;
+    font-weight: bold;
+    background-color: none;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+    font-family: 'Anton', sans-serif;
+}
+/* HOVER EFFECT for the NAV BUTTONS */
+.about-btn:hover, .connect-btn:hover, .contact-btn:hover, .home-btn:hover{
+    background: rgba(255,255,255,0.20);
+    color: rgb(255, 255, 255)
+    
+}
+/* download resume button styling */
+.download-resume-btn{
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    border: 2px solid rgb(44, 128, 224);
+    color: rgb(44, 128, 224);
+    transition: all 0.4s ease;
+    background-color: rgb(44, 128, 224);
+    color: white;
+    font-weight: bold;
+   
+}
+/* Download resume button hover effect */
+.download-resume-btn:hover{
+    border-radius: 0px;
+    border: solid white 2px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: transparent;
+}
+
+
+/* Container to hold projects button and text above it */
+.text-button-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+/* Project button styling */
+.projects-btn{
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    border: 2px solid transparent;
+  
+    transition: all 0.4s ease;
+    background-color: rgb(255, 255, 255);
+    color: rgb(44, 128, 224);
+    font-weight: bold;
+}
+/* Project button hover effect */
+.projects-btn:hover{
+    border-radius: 0px;
+    color: rgb(255, 255, 255);
+    border: solid rgb(255, 255, 255) 2px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: transparent;
+}
+
+
+
+
+
+
+/* MOBILE menu styling */
+.mobile-menu{
+    position: absolute;
+    top: 90px;
+    right: 20px;
+
+    min-width: 220px;
+
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 16px;
+
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+    transition: all 0.3s ease;
+}
+/* TEXT styles within the form */
+.mobile-menu a{
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: block;
+}
+.mobile-menu a:hover{
+    transform: translateX(5px);
+    color: rgb(44, 128, 224);
+}
+
+.mobile-menu.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Project button styling */
+.projects-btn,
+.btn-connect {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    background-color: rgb(255, 255, 255);
+    color: rgb(44, 128, 224);
+    font-weight: bold;
+}
+/* Project button hover effect */
+.projects-btn:hover, .btn-connect:hover{
+    border-radius: 0px;
+    color: rgb(255, 255, 255);
+    border: solid rgb(255, 255, 255) 2px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: transparent;
+}

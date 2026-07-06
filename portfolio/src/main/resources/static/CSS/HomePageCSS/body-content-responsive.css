@@ -1,0 +1,154 @@
+@media (max-width: 900px) {
+    .labels-row {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .about-description,
+    .label-group {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .skills-list {
+        justify-content: center;
+    }
+
+    .card-maven, .card-java, .card-oop, .card-javascript,
+    .card-htmlcss, .card-sql, .card-git, .card-spring, .card-csharp {
+        width: 100%;
+    }
+
+    .experience-label {
+        padding-left: 20px;
+    }
+
+    .underline-experience {
+        margin-left: 20px;
+    }
+
+    .experience-container {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .experience-card {
+        width: 100%;
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center;
+        gap: 20px;
+    }
+
+    .experience-description {
+        max-width: 70%;
+       
+    }
+        .txt-description{
+        font-size: 12px;
+        text-align: left;
+        color: white;
+
+
+
+    }
+}
+
+
+
+
+@media (max-width: 1450px) {
+    .experience-summary {
+        position: static;
+        margin-top: 30px;
+        padding-right: 0;
+        
+
+        display: flex;
+        justify-content: center;
+
+        width: 100%;
+    }
+
+    .experience-table {
+        width: 100%;
+        max-width: 700px;
+    }
+        .txt-description{
+        font-size: 12px;
+        text-align: left;
+        color: white;
+
+
+
+    }
+
+}
+
+
+
+@media (max-width: 768px) {
+    .about-label,
+    .experience-label,
+    .skills-label {
+        font-size: 22px;
+    }
+
+    .about-description {
+        font-size: 16px;
+    }
+
+    .skills-list {
+        gap: 10px;
+    }
+
+    .experience-card {
+        padding: 18px;
+        min-height: auto;
+    }
+
+    .company-logo {
+        width: 190px;
+        height: 120px;
+    }
+
+    .star-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 26px;
+    }
+
+    .experience-info h3 {
+        font-size: 20px;
+    }
+
+    .company-name,
+    .experience-date,
+    .experience-description {
+        font-size: 16px;
+    
+    }
+    .about-label{
+        margin-top: 70px;
+        
+    }
+    .txt-header{
+        font-size: 25px;
+        text-align: center;
+    }
+    .txt-label, .txt2-label{
+        font-size: 20px;
+        text-align: center;
+    }
+    .txt-description{
+        font-size: 12px;
+        text-align: center;
+        color: rgb(255, 255, 255);
+
+
+    }
+
+    
+    
+}

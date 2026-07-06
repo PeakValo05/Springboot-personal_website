@@ -1,0 +1,24 @@
+
+.label-jackson{
+    font-size: 25px;
+    padding: 10px
+    
+
+}
+
+.sub-header{
+    background-color: rgb(44, 128, 224);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+/* Tag that is placed on the sub header */
+.notice-label{
+    text-align: center;
+}
+.peaks-label{
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    
+}

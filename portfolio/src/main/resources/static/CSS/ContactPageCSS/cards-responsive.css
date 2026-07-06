@@ -1,0 +1,107 @@
+
+/* For laptops */
+@media (max-width: 1450px) {
+    .card-content {
+        min-height: 100vh;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-card {
+        width: 100%;
+        max-width: 400px;
+        min-height: 420px;
+        height: auto;
+
+        padding: 30px 20px;
+        gap: 18px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        border-radius: 20px;
+        background: linear-gradient(to bottom left, rgb(44, 128, 224), rgb(8, 51, 100));
+        box-shadow: 
+            inset 0 0 5px rgba(206, 206, 206, 0.5),
+            0 10px 25px rgba(0, 0, 0, 0.7);
+    }
+
+    .header {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 1.6rem;
+    }
+}
+
+
+
+/* For tablets */
+@media(max-width: 900px){
+    .card-content{
+        min-height: 100vh;
+        display: flex;
+        justify-content: center; /* left/right center */
+        align-items: center;     /* up/down center */
+    }
+    .contact-card {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* space between children */
+
+        width: 45%;
+        border-radius: 20px;
+        background: linear-gradient(to bottom left, rgb(44, 128, 224), rgb(8, 51, 100));
+        box-shadow: 
+            inset 0 0 5px rgba(206, 206, 206, 0.5),
+            0 10px 25px rgba(0, 0, 0, 0.7);
+}
+    .header{
+        margin-bottom: 0px;
+    }
+}
+
+/* For Mobile */
+@media (max-width: 768px) {
+    .card-content {
+        min-height: 100vh;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-card {
+        width: 100%;
+        max-width: 360px;
+        min-height: 420px;
+        height: auto;
+
+        padding: 30px 20px;
+        gap: 18px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        border-radius: 20px;
+        background: linear-gradient(to bottom left, rgb(44, 128, 224), rgb(8, 51, 100));
+        box-shadow: 
+            inset 0 0 5px rgba(206, 206, 206, 0.5),
+            0 10px 25px rgba(0, 0, 0, 0.7);
+    }
+
+    .header {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 1.6rem;
+    }
+}
+
+

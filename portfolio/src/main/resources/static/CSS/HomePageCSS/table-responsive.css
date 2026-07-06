@@ -1,0 +1,41 @@
+/* Puts the COSTCO and CINEMARK tables to the left of the page */
+@media (max-width: 1550px) {
+    .costco-experience-summary, .cinemark-experience-summary{
+        position: static;
+        margin-top: 30px;
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 80px;
+        width: 100%;
+    }
+    
+/* max-width set to 900 PX */
+    .costco-experience-table, .cinemark-experience-table {
+        max-width: 900px;
+    }
+
+   
+
+}
+
+@media (max-width: 768px) {
+    .costco-experience-table th,
+    .costco-experience-table td,
+    .cinemark-experience-table th,
+    .costco-experience-table td {
+        padding: 12px;
+        margin: 0;
+        font-size: 14px;
+        
+
+        
+    }
+
+    .costco-experience-summary,
+    .cinemark-experience-summary {
+        padding: 10px;
+
+
+    }
+}
+

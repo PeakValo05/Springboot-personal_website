@@ -1,0 +1,18 @@
+@media (max-width: 768px) {
+
+    .text-and-image-container {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .self-image {
+        width: 90%;
+        max-width: 300px;
+        height: auto;
+
+        margin-left: 0;
+        margin-top: 40px;
+    }
+
+}

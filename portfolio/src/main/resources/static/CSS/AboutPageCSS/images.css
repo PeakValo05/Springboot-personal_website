@@ -1,0 +1,18 @@
+.icons{
+    width: 30px;
+    height: 30px;
+}
+.self-image{
+    object-fit: cover;
+    width: 400px;
+    height: 460px;
+    margin-left: 150px;
+    margin-top: 100px;
+    border-radius: 20px;
+}
+.text-and-image-container{
+    display: flex;
+    align-items: center;
+    gap: 150px;
+   
+}

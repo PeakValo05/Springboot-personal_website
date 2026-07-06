@@ -1,0 +1,43 @@
+/* Responsive for tablets/phones */
+@media (max-width: 768px) {
+    .hero-image {
+        min-height: 300px;
+        padding: 25px;
+        background-position: center;
+    }
+
+    .txt-label {
+        font-size: 22px;
+    }
+
+    .txt-header {
+        font-size: 40px;
+    }
+
+    .txt2-label {
+        font-size: 18px;
+    }
+
+    .txt-description {
+        font-size: 14px;
+        max-width: 90%;
+        margin-top: 5px;
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 768px) {
+    .hero-image {
+        min-height: 300px;
+        padding: 20px;
+    }
+
+    .txt-header {
+        font-size: 32px;
+    }
+
+    .txt-label {
+        font-size: 20px;
+    }
+
+    }

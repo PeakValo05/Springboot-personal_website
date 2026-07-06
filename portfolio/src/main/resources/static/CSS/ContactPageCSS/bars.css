@@ -1,0 +1,40 @@
+.sub-header{
+    background-color: rgb(44, 128, 224);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+/* Tag that is placed on the sub header */
+.notice-label{
+    text-align: center;
+}
+
+
+/* Container to hold personal logo and name */
+.peaks-label{
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    font-weight: bold;
+}
+/* PV logo's height and width */
+.PV-logo{
+    width: 75px;
+    height: 75px;
+    transition: all ease 0.1s;
+    cursor: pointer;
+}
+
+/* Hover effect on the PV logo */
+.PV-logo:hover{
+    scale: 1.1;
+}
+/* Container for the PV logo and the name to the right */
+.logo-name-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 35px;
+    
+}
+
