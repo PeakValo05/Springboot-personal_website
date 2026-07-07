@@ -4,14 +4,34 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.portfoliomanager.portfolio.data.CinemarkSkillsDataAccessObject;
+import com.portfoliomanager.portfolio.data.CostcoSkillsDataAccessObject;
+import com.portfoliomanager.portfolio.models.CostcoSkillsModel;
+import java.util.List;
+
+
+import org.springframework.ui.Model;
+
 
 @Controller
 public class NavController {
 
+    // Handle the root URL ("/") and return the "index" view
     @GetMapping("/")
-    public String home() {
+    public String home(Model model) {
+
+        CostcoSkillsDataAccessObject dao = new CostcoSkillsDataAccessObject();
+        model.addAttribute("costcoSkills", dao.getAllSkills());
+
+        CinemarkSkillsDataAccessObject cinemarkDao = new CinemarkSkillsDataAccessObject();
+        model.addAttribute("cinemarkSkills", cinemarkDao.getAllSkills());
+
         return "index";
-    }
+}
 
     @GetMapping("/about")
     public String about() {

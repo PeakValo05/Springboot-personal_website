@@ -213,29 +213,22 @@
 
 
 
-        <!--COSTCO Summary within the TABLE-->
+        <!--COSTCO Summary within the TABLE / stored in MySql-->
     <div class="costco-experience-summary">
+             
+
                     <table class="costco-experience-table">
+
+
                         <tr>
                             <th>Company</th>
                             <th>Environment</th>
                             <th>Focus</th>
                         </tr>
-
-                        <tr>
-                            <td>Costco Wholesale</td>
-                            <td>Fast-Paced</td>
-                            <td>Cleanliness & Support</td>
-                        </tr>
-                        <tr>
-                            <td>Costco Wholesale</td>
-                            <td>Teamwork</td>
-                            <td>Production & Organization</td>
-                        </tr>
-                        <tr>
-                            <td>Costco Wholesale</td>
-                            <td>Time Management</td>
-                            <td>Metting Daily Goals</td>
+                        <tr th:each="experience : ${costcoSkills}">
+                            <td th:text="${experience.company}"></td>
+                            <td th:text="${experience.environment}"></td>
+                            <td th:text="${experience.focus}"></td>
                         </tr>
                     </table>
         </div>
@@ -250,16 +243,11 @@
                             <th>Environment</th>
                             <th>Focus</th>
                         </tr>
-
-                        <tr>
-                            <td>Cinemark Theaters</td>
-                            <td>Customer Service</td>
-                            <td>Team Coordination</td>
-                        </tr>
-                        <tr>
-                            <td>Cinemark Theaters</td>
-                            <td>Problem Solving</td>
-                            <td>Guest Satisfaction</td>
+                        <!-- Loop through the cinemarkExperiences list and display each experience in a table row -->
+                        <tr th:each="experience : ${cinemarkSkills}">
+                            <td th:text="${experience.company}"></td>
+                            <td th:text="${experience.environment}"></td>
+                            <td th:text="${experience.focus}"></td>
                         </tr>
                  
                     </table>
