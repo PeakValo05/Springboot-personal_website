@@ -2,16 +2,11 @@ package com.portfoliomanager.portfolio.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.portfoliomanager.portfolio.data.CinemarkSkillsDataAccessObject;
 import com.portfoliomanager.portfolio.data.CostcoSkillsDataAccessObject;
-import com.portfoliomanager.portfolio.models.CostcoSkillsModel;
-import java.util.List;
+
 
 
 import org.springframework.ui.Model;

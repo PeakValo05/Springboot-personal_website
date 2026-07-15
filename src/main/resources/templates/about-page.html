@@ -23,8 +23,8 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/CSS/AboutPageCSS/body-content.css">
-    <link rel="stylesheet" href="/CSS/AboutPageCSS/bars.css">
-    <link rel="stylesheet" href="/CSS/AboutPageCSS/buttons.css">
+    <link rel="stylesheet" th:href="@{/CSS/AboutPageCSS/bars.css}">
+    <link rel="stylesheet" th:href="@{/CSS/AboutPageCSS/buttons.css(v=4)}">
     <link rel="stylesheet" href="/CSS/AboutPageCSS/images.css">
     <link rel="stylesheet" href="/CSS/AboutPageCSS/bars-responsive.css">
     <link rel="stylesheet" href="/CSS/AboutPageCSS/images-responsive.css">
@@ -46,15 +46,33 @@
 
 
 
+
             <!-- ==== Container for all nav button ==== -->
     <div class="nav-button-container">
-        <a th:href="@{/}" class="home-btn">Home</a>
-        <a th:href="@{/about}" class="about-btn">About</a>
-        <a th:href="@{/contact}" class="contact-btn">Contact</a>
-        <a th:href="@{/connect}" class="connect-btn">Connect</a>
-        <button class="download-resume-btn">Download Resume</button>
-    
+        <a th:href="@{/}">
+            <img th:src="@{SVG Images/house-check-fill.svg}" class="home-btn">
+        </a>
+
+        <a th:href="@{/about}">
+            <img th:src="@{SVG Images/file-person-fill.svg}" class="about-btn">
+        </a>
+
+
+        <a th:href="@{/contact}">
+            <img th:src="@{SVG Images/envelope-arrow-down-fill.svg}" class="contact-btn">
+        </a>
+
+
+        <a th:href="@{/connect}">
+            <img th:src="@{SVG Images/person-lines-fill.svg}" class="connect-btn">
+        </a>
+
+
+        <a th:href="@{/assets/Jackson's Resume.pdf}">
+            <img th:src="@{SVG images/cloud-arrow-down-fill.svg}" class="download-resume-btn">
+        </a>
     </div>
+
 
     
     <!--MOBILE button-->

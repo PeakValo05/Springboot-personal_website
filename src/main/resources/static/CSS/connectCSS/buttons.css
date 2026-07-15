@@ -212,54 +212,38 @@
 .nav-button-container{
     display: flex;
     margin-left: auto;
-    gap: 60px;
+    gap: 50px;
     padding-right: 200px;
    
 }
-.about-btn, .connect-btn, .contact-btn, .home-btn{
+/* Nav button styling */
+.about-btn, .connect-btn, .contact-btn, .download-resume-btn, .home-btn{
     font-size: 20px;
     font-weight: bold;
     background-color: none;
-    width: 100px;
+    width: 50px;
     height: 50px;
     line-height: 50px;
-    cursor: pointer;
     text-align: center;
     border-radius: 15px;
-    color: rgb(255, 255, 255);
+    cursor: pointer;
+    color: white;
     text-decoration: none;
-    transition: transform 0.4s ease, background-color 0.4s ease;
+    transition: filter 0.3s ease;
     font-family: 'Anton', sans-serif;
-
+    filter: brightness(0) invert(1);
 }
 /* HOVER EFFECT for the NAV BUTTONS */
-.about-btn:hover, .connect-btn:hover, .contact-btn:hover, .home-btn:hover{
-    background: rgba(255,255,255,0.20);
-    color: rgb(255, 255, 255)
+.about-btn:hover,
+.connect-btn:hover, 
+.contact-btn:hover, 
+.download-resume-btn:hover,
+.home-btn:hover{
+
+    filter: brightness(0) invert(0.8);
+    transform: translateY(-3px);
     
 }
-/* Download resume button styling */
-.download-resume-btn{
-    width: 200px;
-    height: 50px;
-    border-radius: 25px;
-    border: 2px solid rgb(44, 128, 224);
-    color: rgb(44, 128, 224);
-    transition: all 0.4s ease;
-    background-color: rgb(44, 128, 224);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-}
-/* Download resume hover effect */
-.download-resume-btn:hover{
-    border-radius: 0px;
-    border: solid white 2px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    background-color: transparent;
-}
-
-
 
 
 
