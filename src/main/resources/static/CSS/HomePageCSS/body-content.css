@@ -159,6 +159,7 @@ span{
     gap: 18px;
     padding-left: 30px;
     font-size: 32px;
+    font-family: 'Krona One', sans-serif;
 }
 .experience-container {
     display: flex;
