@@ -9,7 +9,7 @@
 }
 
 
-/* Scroll back to top */
+/* Scroll back to bottom */
 .scroll-bottom {
     background: transparent;
     border: none;
@@ -24,8 +24,9 @@
 .arrow-icon {
     width: 40px;
     height: 40px;
-    filter: brightness(0) invert(1);
+    filter: brightness(0);
     transition: transform .3s ease;
+
 }
 .scroll-bottom:hover .arrow-icon {
     transform: translateY(6px);
@@ -38,53 +39,26 @@
 
 
 /* Scroll back to top */
-.scroll-top{
-    background: none;
+.scroll-top {
+    background: transparent;
     border: none;
     padding: 0;
-    margin: 0;
     cursor: pointer;
 
-    width: 25px;
-    height: 25px;
-
-    border-right: 3px solid rgb(44, 128, 224);
-    border-bottom: 3px solid rgb(44, 128, 224);
-    border-left: 6px solid rgb(44, 128, 224);
-    border-top: 6px solid rgb(44, 128, 224);
-
-    transform: rotate(45deg);
-    transition: all .4s ease;
-    margin-bottom: 10px;
-    
-}
-/* Hover effect for the arrow */
-.scroll-top:hover{
-    transform: rotate(0deg);
-    border: none;
-    width: auto;
-    height: auto;
-}
-.scroll-top::after{
-    content: "";
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    
-   
-}
-.scroll-top:hover::after{
-    content: "- Scroll Up -";
-    font-weight: bold;
-    opacity: 1;
-    color: rgb(44, 128, 224);
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-
-
-
-
-
-
+.arrow-icon-top-scroll {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0);
+    transform: rotate(180deg);
+    transition: transform .3s ease, filter .3s ease;
+}
+.scroll-top:hover .arrow-icon-top-scroll {
+    transform: rotate(180deg) translateY(-6px);
+    filter: brightness(0) invert(1)
+            drop-shadow(0 0 10px #2c80e0);
+}

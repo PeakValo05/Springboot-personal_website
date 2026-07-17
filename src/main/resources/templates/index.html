@@ -22,21 +22,20 @@
 
 
 
-
-    <!-- Links to my CSS files -->
-    <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/bars.css}">
-    <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons.css(v=4)}">
-    <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/cards.css}">
-    <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/header-responsive.css}">
-    <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/content.css(v=4)}">
-    <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/body-content.css(v=4)}">
-    <link rel="stylesheet" href="/CSS/HomePageCSS/header.css">
-    <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/table.css}">
-    <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/animated-arrow.css(v=4)}">
-    <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/body-content-responsive.css}">
-    <link rel="stylesheet" href="/CSS/HomePageCSS/table-responsive.css">
-    <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons-responsive.css}">
-    <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/mobile-btn.css}">
+<!-- Links to my CSS files -->
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/bars.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/cards.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/header-responsive.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/content.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/body-content.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/header.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/table.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/animated-arrow.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/body-content-responsive.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/table-responsive.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons-responsive.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/mobile-btn.css(v=4)}">
 
 
 
@@ -53,7 +52,7 @@
         <!--Container to hold logo and name-->
     <div th:class="@{logo-name-container}">
         <img th:src="@{images/PV logo.png}" class="PV-logo">
-        <h1 class="peaks-label">PEAKSVALO</h1>
+
 
 
 
@@ -112,11 +111,11 @@
 
         
             
-            
+        <div class="header-container">
             <h1 class="txt-header">Jackson Wiser</h1>
             <p class="txt2-label">Software Development Student</p>
 
-            <p th:class="@{txt-description}">
+            <p class="txt-description">
                 I’ve always enjoyed learning how technology works and turning that curiosity
                 into real projects. Whether I’m building applications with Java, designing
                 websites, or figuring out how different systems connect together, I like
@@ -124,8 +123,14 @@
                 continuing to improve my skills in full-stack development while gaining more
                 experience building structured and scalable applications.
             </p>
+           
 
-            <button class="projects-btn">View my Projects</button>
+            <!--Projects button-->
+
+        <a th:href="@{#}">
+            <img th:src="@{SVG images/trophy-svgrepo-com.svg}" class="projects-btn">
+        </a>
+            </div>
 
         </div>
 
@@ -225,44 +230,9 @@
 
 
 
-        <!--COSTCO Summary within the TABLE / stored in MySql-->
-    <div class="costco-experience-summary">
-             
-
-                    <table class="costco-experience-table">
-
-
-                        <tr>
-                            <th>Company</th>
-                            <th>Environment</th>
-                            <th>Focus</th>
-                        </tr>
-                        <tr th:each="experience : ${costcoSkills}">
-                            <td th:text="${experience.company}"></td>
-                            <td th:text="${experience.environment}"></td>
-                            <td th:text="${experience.focus}"></td>
-                        </tr>
-                    </table>
-        </div>
 
 
 
-                <!--CINEMARK Summary within the TABLE-->
-    <div class="cinemark-experience-summary">
-                    <table class="cinemark-experience-table">
-                        <tr>
-                            <th>Company</th>
-                            <th>Environment</th>
-                            <th>Focus</th>
-                        </tr>
-                        <!-- Loop through the cinemarkExperiences list and display each experience in a table row -->
-                        <tr th:each="experience : ${cinemarkSkills}">
-                            <td th:text="${experience.company}"></td>
-                            <td th:text="${experience.environment}"></td>
-                            <td th:text="${experience.focus}"></td>
-                        </tr>
-                 
-                    </table>
         </div>
 
 
@@ -329,12 +299,15 @@
 
         
 
-        <!-- Scroll to top -->
-        <section class="scroll-top-section">
-            <div class="arrow-container">
-                <button id="scrollTopBtn" class="scroll-top"></button>
-            </div>
-        </section>
+    <section>
+    <div class="arrow-container">
+       <button id="scrollTopBtn" class="scroll-top">
+            <img th:src="@{/SVG Images/caret-up-fill.svg}" class="arrow-icon-top-scroll" alt="Scroll Down">
+       </button>
+
+    </div>
+    </section>
+       
 
         <!-- Footer -->
         <footer class="sub-header">

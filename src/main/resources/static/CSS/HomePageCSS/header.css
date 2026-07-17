@@ -6,41 +6,49 @@
     padding: 40px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    background-image: url("../../images/bg.png");
+    gap: 5px;
+    background-image: url("../../images/bg.png"); /* Hero image */
     background-size: cover;
     background-position: center 75%;
     background-repeat: no-repeat;
 }
-
+/* Header (Jackson Wiser) */
 .txt-header{
     font-size: 50px;
+    padding-top: 20px;
     font-weight: bold;
     color: white;
-    margin-top: 100px;
-    font-family: 'Poppins', sans-serif;
+    margin-top: 50px;
+    font-family: 'Inter', sans-serif;
+    margin: 5px;
 }
+/* Header 2 (Software Development Student) */
 .txt2-label{
-    font-size: 20px;
+    font-size: 16px;
     color: rgb(44, 128, 224);
+    margin: 5px;
+    transform: translateY(-35px);
 
     
 }
+/* Main description in the header */
 .txt-description{
-    font-size: 15px;
+    font-size: 18px;
     max-width: 600px;
-
     color: white;
+    margin: 5px;
+
+}
+.header-container{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
 }
 
 
 
-/* Container to hold personal logo and name */
-.peaks-label{
-    color: white;
-    font-size: 35px;
-    font-weight: bold;
-}
+
 /* PV logo width and height */
 .PV-logo{
     width: 75px;
