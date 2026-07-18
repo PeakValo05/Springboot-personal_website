@@ -24,14 +24,14 @@
 
 <!-- Links to my CSS files -->
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/bars.css(v=4)}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons.css}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/cards.css(v=4)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/header-responsive.css(v=4)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/content.css(v=4)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/body-content.css(v=4)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/header.css(v=4)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/table.css(v=4)}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/animated-arrow.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/animated-arrow.css}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/body-content-responsive.css(v=4)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/table-responsive.css(v=4)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons-responsive.css(v=4)}">
@@ -58,7 +58,12 @@
 
 
             <!-- ==== Container for all nav button ==== -->
+
     <div class="nav-button-container">
+
+        <a th:href="@{#}">
+            <img th:src="@{SVG Images/laptop.svg}" class="projects-btn">
+        </a>
 
         <a th:href="@{/about}">
             <img th:src="@{SVG Images/file-person-fill.svg}" class="about-btn">
@@ -79,6 +84,7 @@
             <img th:src="@{SVG images/cloud-arrow-down-fill.svg}" class="download-resume-btn">
         </a>
     </div>
+
 
 
 
@@ -113,23 +119,31 @@
             
         <div class="header-container">
             <h1 class="txt-header">Jackson Wiser</h1>
-            <p class="txt2-label">Software Development Student</p>
+            <p class="txt2-label">Aspiring Full-Stack Developer</p>
 
             <p class="txt-description">
-                I’ve always enjoyed learning how technology works and turning that curiosity
-                into real projects. Whether I’m building applications with Java, designing
-                websites, or figuring out how different systems connect together, I like
-                creating things that are both functional and easy to use. Right now, I’m
-                continuing to improve my skills in full-stack development while gaining more
-                experience building structured and scalable applications.
+ I'm a software development student passionate about building full-stack applications with Java and modern web technologies.
+  I enjoy solving problems, designing clean user interfaces, and creating software that's both functional and easy to use.
             </p>
+
+
+
+
+                    <!--Scroll to bottom of main page-->
+    <section>
+        <div class="arrow-container">
+       <button id="scrollBottomBtn" class="scroll-bottom">
+            <img th:src="@{/SVG Images/chevron-double-down.svg}" class="arrow-icon" alt="Scroll Down">
+       </button>
+            
+        </button>
+
+    </div>
+</section>
+
+
+
            
-
-            <!--Projects button-->
-
-        <a th:href="@{#}">
-            <img th:src="@{SVG images/trophy-svgrepo-com.svg}" class="projects-btn">
-        </a>
             </div>
 
         </div>
@@ -137,18 +151,7 @@
 
 
 
-        <!--Scroll to bottom of main page-->
-<section>
-    <div class="arrow-container">
-       <button id="scrollBottomBtn" class="scroll-bottom">
-            <img th:src="@{/SVG Images/caret-down-fill.svg}" class="arrow-icon" alt="Scroll Down">
-       </button>
-            
-        </button>
 
-    </div>
-</section>
-       
 
 
 
@@ -299,14 +302,7 @@
 
         
 
-    <section>
-    <div class="arrow-container">
-       <button id="scrollTopBtn" class="scroll-top">
-            <img th:src="@{/SVG Images/caret-up-fill.svg}" class="arrow-icon-top-scroll" alt="Scroll Down">
-       </button>
 
-    </div>
-    </section>
        
 
         <!-- Footer -->

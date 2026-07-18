@@ -3,9 +3,20 @@
 .nav-button-container{
     display: flex;
     margin-left: auto;
+    margin-right: 60px;
+
     gap: 50px;
-    padding-right: 200px;
-   
+
+    padding: 12px 25px;
+
+    border-radius: 999px;
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.2);
 }
 /* Nav button styling */
 .about-btn, .connect-btn, .contact-btn, .download-resume-btn, .projects-btn{
@@ -20,15 +31,18 @@
     cursor: pointer;
     color: white;
     text-decoration: none;
-    transition: filter 0.3s ease;
+    transition: transform .25s ease, filter .25s ease;
     font-family: 'Anton', sans-serif;
     filter: brightness(0) invert(1);
+
+
 }
 /* HOVER EFFECT for the NAV BUTTONS */
 .about-btn:hover, .connect-btn:hover, .contact-btn:hover, .download-resume-btn:hover, .projects-btn:hover{
 
     filter: brightness(0) invert(0.8);
     transform: translateY(-3px);
+    
     
 }
 

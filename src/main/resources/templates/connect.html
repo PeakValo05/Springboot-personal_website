@@ -17,7 +17,7 @@
 
   
 
-    <link rel="stylesheet" th:href="@{/CSS/ConnectCSS/buttons.css(v=4)}">
+    <link rel="stylesheet" th:href="@{/CSS/ConnectCSS/buttons.css}">
     <link rel="stylesheet" href="/CSS/ConnectCSS/buttons-responsive.css">
     <link rel="stylesheet" href="/CSS/ConnectCSS/body-content.css">
     <link rel="stylesheet" href="/CSS/ConnectCSS/cards.css">
@@ -48,6 +48,10 @@
     <div class="nav-button-container">
         <a th:href="@{/}">
             <img th:src="@{SVG Images/house-check-fill.svg}" class="home-btn">
+        </a>
+
+        <a th:href="@{#}">
+            <img th:src="@{SVG Images/laptop.svg}" class="projects-btn">
         </a>
 
         <a th:href="@{/about}">

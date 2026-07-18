@@ -4,7 +4,8 @@
 }
 .arrow-container{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    width: 100%;
 
 }
 
@@ -24,8 +25,9 @@
 .arrow-icon {
     width: 40px;
     height: 40px;
-    filter: brightness(0);
+    filter: brightness(0) invert(1); /* white */
     transition: transform .3s ease;
+    margin-top: 10px;
 
 }
 .scroll-bottom:hover .arrow-icon {
@@ -38,27 +40,3 @@
 
 
 
-/* Scroll back to top */
-.scroll-top {
-    background: transparent;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.arrow-icon-top-scroll {
-    width: 40px;
-    height: 40px;
-    filter: brightness(0);
-    transform: rotate(180deg);
-    transition: transform .3s ease, filter .3s ease;
-}
-.scroll-top:hover .arrow-icon-top-scroll {
-    transform: rotate(180deg) translateY(-6px);
-    filter: brightness(0) invert(1)
-            drop-shadow(0 0 10px #2c80e0);
-}
