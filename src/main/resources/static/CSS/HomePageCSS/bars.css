@@ -22,4 +22,85 @@
     font-family: 'Poppins', sans-serif;
     
 }
+/* Top bar container & styling */
+.top-bar{
+    display: flex;
+    width: 90%;
+    height: 75px;
+    background-color: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,.2);
+    border-radius: 20px;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+.top-bar-text{
+    color: black;
+}
+.top-bar-container{
+    display: flex;
+    justify-content: center;
+    margin-left: 290px;
+    margin-top: 20px;
+    
+
+}
+
+
+
+/* PV logo width and height */
+.PV-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+   
+    
+}
+.logo-name-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+ 
+}
+
+.logo-name-container p {
+    margin: 0;
+    font-size: 30px;
+    font-family:'Sora', sans-serif;
+    font-weight: bold;
+    padding: 0;
+    margin-right: 80px;
+}
+.section-title {
+    display: block;
+    color: grey;
+    transform: translateY(20px);
+}
+
+
+/* Container for all nav buttons */
+.side-bar-container{
+    display: flex;
+    left: 0;
+    top: 0;
+    position: absolute;
+    flex-direction: column;
+    height: 100%;
+    width: 300px;
+    gap: 40px;
+    justify-content: top;
+   
+    align-items: left;
+    padding-top: 40px;   /* Space from the top */
+    padding-left: 20px;
+    
+
+
+    border: 1px solid rgba(255,255,255,.15);
+    flex-direction: column;
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.2);
+}
+
 

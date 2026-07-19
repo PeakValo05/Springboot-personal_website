@@ -1,58 +1,36 @@
 
-/* Container for all nav buttons */
-.nav-button-container{
-    display: flex;
-    right: 0;
-    top: 0;
-    position: absolute;
-    gap: 50px;
-    height: 100%;
-    width: 150px;
-    margin: 0;
-    justify-content: top;
-   
-    align-items: left;
-    padding: 5px 15px;
-    
 
-
-    border: 1px solid rgba(255,255,255,.15);
-    flex-direction: column;
-    background: rgba(255,255,255,.08);
-    backdrop-filter: blur(10px);
-
-    box-shadow: 0 8px 25px rgba(0,0,0,.2);
-}
 /* Nav button styling */
 .about-btn, .connect-btn, .contact-btn, .download-resume-btn, .projects-btn{
-    margin-top: 20px;
+
     font-size: 30px;
     font-weight: bold;
     background-color: none;
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
     line-height: 50px;
     text-align: center;
-
+    
     cursor: pointer;
     color: white;
     text-decoration: none;
     transition: transform .25s ease, filter .25s ease;
     font-family: 'Anton', sans-serif;
-    filter: brightness(0) invert(1);
+    filter: brightness(0);
 }
 /* text next to the nav buttons */
 .text-wrap {
     display: flex;
     align-items: center;   /* Vertically center the icon and text */
-    gap: 12px;             /* Space between icon and text */
+    gap: 12px; 
+             /* Space between icon and text */
 }
 
 .text-wrap p {
     margin: 0;             /* Remove default paragraph margins */
     color: white;
     font-family: 'Inter', sans-serif;
-    margin-top: 20px;
+
 }
 /* HOVER EFFECT for the NAV BUTTONS */
 .about-btn:hover, .connect-btn:hover, .contact-btn:hover, .download-resume-btn:hover, .projects-btn:hover{

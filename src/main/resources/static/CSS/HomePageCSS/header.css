@@ -6,19 +6,7 @@
 
 
 
-.hero-image {
-    position: relative;
-    width: 100%;
-    min-height: 700px;
-    margin: 0;
-    padding: 40px;
-    border: none;
-    outline: none;
-    background-image: url("../../images/bg.png");
-    background-size: cover;
-    background-position: center 75%;
-    background-repeat: no-repeat;
-}
+
 /* Header (Jackson Wiser) */
 .txt-header{
     font-size: 50px;
@@ -35,11 +23,16 @@
     color: rgb(44, 128, 224);
     margin: 5px;
     transform: translateY(-35px);
+    position: absolute;
+    right: 0;
 
     
 }
 /* Main description in the header */
 .txt-description{
+
+    position: absolute;
+    right: 0;
     font-size: 18px;
     max-width: 600px;
     color: white;
@@ -47,27 +40,6 @@
     
 
 }
-.header-container{
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-    font-family: 'Inter', sans-serif;
-}
 
 
-
-
-/* PV logo width and height */
-.PV-logo{
-    width: 75px;
-    height: 75px; 
-    
-}
-
-.logo-name-container{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    
-}
 

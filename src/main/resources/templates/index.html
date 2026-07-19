@@ -17,19 +17,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     
 
 
 
 <!-- Links to my CSS files -->
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/bars.css(v=4)}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons.css(v=5)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/bars.css(v=5)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons.css(v=4)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/cards.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/header-responsive.css(v=4)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/content.css(v=4)}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/body-content.css(v=5)}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/header.css(v=5)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/body-content.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/header.css(v=4)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/table.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/animated-arrow.css}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/body-content-responsive.css(v=5)}">
@@ -45,60 +46,69 @@
 <body>
     <section th:class="@{home-page}">
 
+
+<!--Container for the top bar-->
+        <div class="top-bar-container">
+               <!--Top bar with name profile pic, etc-->
+        <div class="top-bar">
+            <p class="top-bar-text">Jackson<br> Wiser</p>
+            </div>
+       
+
+        </div>
+
+
+
     
-        <!-- ===== HERO with logo, name, nav buttons, etc ===== -->
-    <div th:class="@{hero-image}">
+<div class="side-bar-container">
 
-        <!--Container to hold logo and name-->
-    <div th:class="@{logo-name-container}">
-        <img th:src="@{images/PV logo.png}" class="PV-logo">
+    <div class="logo-name-container">
+        <img th:src="@{images/PVLogoBlack.png}" class="PV-logo">
+        <p>PeaksValo</p>
+    </div>
 
+    
 
-
-
-
-            <!-- ==== Container for all nav button ==== -->
-
-
-    <div class="nav-button-container">
-
+    <span class="section-title">Essentials</span>
     <div class="text-wrap">
         <a th:href="@{#}">
             <img th:src="@{SVG Images/laptop.svg}" class="projects-btn">
         </a>
-        <p>Projects</p>
+        <p style="color: black">Projects</p>
     </div>
 
     <div class="text-wrap">
         <a th:href="@{/about}">
             <img th:src="@{SVG Images/file-person-fill.svg}" class="about-btn">
         </a>
-        <p>About</p>
+        <p style="color: black">About</p>
     </div>
 
     <div class="text-wrap">
         <a th:href="@{/contact}">
             <img th:src="@{SVG Images/envelope-arrow-down-fill.svg}" class="contact-btn">
         </a>
-        <p>Contact</p>
+        <p style="color: black">Contact</p>
     </div>
 
     <div class="text-wrap">
         <a th:href="@{/connect}">
             <img th:src="@{SVG Images/person-lines-fill.svg}" class="connect-btn">
         </a>
-        <p>Connect</p>
+        <p style="color: black">Connect</p>
     </div>
-
 
     <div class="text-wrap">
         <a th:href="@{/assets/Jackson's Resume.pdf}">
-            <img th:src="@{SVG images/cloud-arrow-down-fill.svg}" class="download-resume-btn">
+            <img th:src="@{SVG Images/cloud-arrow-down-fill.svg}" class="download-resume-btn">
         </a>
-        <p>Resume</p>
+        <p style="color: black">Resume</p>
     </div>
+
 </div>
-   
+
+
+ 
 
 
 
@@ -133,15 +143,6 @@
 
         
             
-        <div class="header-container">
-            <h1 class="txt-header">Jackson Wiser</h1>
-            <p class="txt2-label">Aspiring Full-Stack Developer</p>
-
-            <p class="txt-description">
- I'm a software development student passionate about building full-stack applications with Java and modern web technologies.
-  I enjoy solving problems, designing clean user interfaces, and creating software that's both functional and easy to use.
-            </p>
-
 
 
 
@@ -157,177 +158,9 @@
     </div>
 </section>
 
-
-
-           
-            </div>
-
-        </div>
-
-
-
-
-
-
-
-
-
-        <!-- ===== ABOUT + SKILLS ===== -->
-    <div class="labels-row">
-
-            <div class="label-group">
-                <h1 class="about-label">About Me</h1>
-                <div class="underline-about"></div>
-
-                <p class="about-description">
-                    I enjoy turning ideas into real projects, whether that’s working with Java,
-                    building web interfaces, or improving how systems connect and communicate.
-                    Right now, I’m continuing to grow my skills in full-stack development and
-                    learning how to build more scalable and structured applications.
-                </p>
-            </div>
-
-
-            <div class="label-group">
-                <!--SKILL label above skill cards-->
-                <h2 class="skills-label">Skills</h2>
-                <!--Underline under the skill label-->
-                <div class="underline-skills"></div>
-                <!--All the skills listed-->
-                <div class="skills-list">
-
-                    <div class="card-java">
-                        <span>Java</span>
-                        <img src="images/javalogo.png" class="java-logo" alt="Java Logo">
-                    </div>
-
-                    <div class="card-oop">
-                        <span>OOP</span>
-                        <img src="images/oop.png" class="oop-logo" alt="OOP Logo">
-                    </div>
-
-                    <div class="card-javascript">
-                        <span>JavaScript</span>
-                        <img src="images/javascript.png" class="javascript-logo" alt="JavaScript Logo">
-                    </div>
-
-                    <div class="card-htmlcss">
-                        <span>HTML/CSS</span>
-                        <img src="images/htmlcss.png" class="htmlcss-logo" alt="HTML CSS Logo">
-                    </div>
-
-                    <div class="card-sql">
-                        <span>SQL</span>
-                        <img src="images/sql.png" class="sql-logo" alt="SQL Logo">
-                    </div>
-
-                    <div class="card-git">
-                        <span>Git</span>
-                        <img src="images/git.png" class="git-logo" alt="Git Logo">
-                    </div>
-
-                    <div class="card-spring">
-                        <span>Spring Boot</span>
-                        <img src="images/spring.png" class="spring-logo" alt="Spring Boot Logo">
-                    </div>
-
-                    <div class="card-csharp">
-                        <span>C#</span>
-                        <img src="images/csharp.png" class="csharp-logo" alt="C Sharp Logo">
-                    </div>
-
-                    <div class="card-maven">
-                        <span>Maven</span>
-                        <img src="images/maven.png" class="maven-logo" alt="Maven Logo">
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-
-
-
-
-
-
-        </div>
-
-
-
-
-
-
-        <!-- ===== EXPERIENCE ===== -->
-    <div class="experience-section">
-
-            <h2 class="experience-label">Experience</h2>
-            <div class="underline-experience"></div>
-
-            <div class="experience-layout">
-
-                <div class="experience-container">
-
-                    
-
-                    <div class="experience-card">
-                        <div class="star-icon">⭐</div>
-
-                        <img src="images/Costco.png" class="company-logo" alt="Costco Logo">
-
-                        <div class="experience-info">
-                            <h3>Bakery Staff Member</h3>
-                            <p class="company-name">Costco Wholesale</p>
-                            <p class="experience-date">2023 - Present</p>
-                        </div>
-                        
-                        
-
-                        <p class="experience-description">
-                            Maintained bakery cleanliness standards, met daily deadlines,
-                            and supported team members wherever needed.
-                        </p>
-                        
-                    </div>
-
-                    <div class="experience-card">
-                        <div class="star-icon">⭐</div>
-
-                        <img src="images/cinemark.png" class="company-logo" alt="Cinemark Logo">
-
-                        <div class="experience-info">
-                            <h3>Floor Staff - Shift Lead</h3>
-                            <p class="company-name">Cinemark Theaters</p>
-                            <p class="experience-date">2021 - 2023</p>
-                        </div>
-
-                        <p class="experience-description">
-                            Assisted with theater operations, helped manage busy crowds,
-                            maintained cleanliness, and supported team coordination.
-                        </p>
-                    </div>
-                </div>
             </div>
         </div>
         </section>
-
-
-
-
-
-        
-
-
-       
-
-        <!-- Footer -->
-        <footer class="sub-header">
-            <p class="notice-label">
-                © 2026 Jackson Wiser. All Rights Reserved.
-            </p>
-        </footer>
-
     </section>
 
 
