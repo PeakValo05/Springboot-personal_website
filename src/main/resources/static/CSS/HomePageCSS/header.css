@@ -1,13 +1,20 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+
 .hero-image {
+    position: relative;
     width: 100%;
     min-height: 700px;
-    height: auto;
-    text-align: left;
+    margin: 0;
     padding: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    background-image: url("../../images/bg.png"); /* Hero image */
+    border: none;
+    outline: none;
+    background-image: url("../../images/bg.png");
     background-size: cover;
     background-position: center 75%;
     background-repeat: no-repeat;
@@ -37,7 +44,7 @@
     max-width: 600px;
     color: white;
     margin: 5px;
-    padding-top: 200px;
+    
 
 }
 .header-container{

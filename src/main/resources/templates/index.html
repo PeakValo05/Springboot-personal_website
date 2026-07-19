@@ -24,18 +24,18 @@
 
 <!-- Links to my CSS files -->
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/bars.css(v=4)}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons.css}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/cards.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons.css(v=5)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/cards.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/header-responsive.css(v=4)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/content.css(v=4)}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/body-content.css(v=4)}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/header.css(v=4)}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/table.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/body-content.css(v=5)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/header.css(v=5)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/table.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/animated-arrow.css}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/body-content-responsive.css(v=4)}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/table-responsive.css(v=4)}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons-responsive.css(v=4)}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/mobile-btn.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/body-content-responsive.css(v=5)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/table-responsive.css(v=5)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons-responsive.css(v=5)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/mobile-btn.css(v=5)}">
 
 
 
@@ -59,31 +59,47 @@
 
             <!-- ==== Container for all nav button ==== -->
 
+
     <div class="nav-button-container">
 
+    <div class="text-wrap">
         <a th:href="@{#}">
             <img th:src="@{SVG Images/laptop.svg}" class="projects-btn">
         </a>
+        <p>Projects</p>
+    </div>
 
+    <div class="text-wrap">
         <a th:href="@{/about}">
             <img th:src="@{SVG Images/file-person-fill.svg}" class="about-btn">
         </a>
+        <p>About</p>
+    </div>
 
-
+    <div class="text-wrap">
         <a th:href="@{/contact}">
             <img th:src="@{SVG Images/envelope-arrow-down-fill.svg}" class="contact-btn">
         </a>
+        <p>Contact</p>
+    </div>
 
-
+    <div class="text-wrap">
         <a th:href="@{/connect}">
             <img th:src="@{SVG Images/person-lines-fill.svg}" class="connect-btn">
         </a>
+        <p>Connect</p>
+    </div>
 
 
+    <div class="text-wrap">
         <a th:href="@{/assets/Jackson's Resume.pdf}">
             <img th:src="@{SVG images/cloud-arrow-down-fill.svg}" class="download-resume-btn">
         </a>
+        <p>Resume</p>
     </div>
+</div>
+   
+
 
 
 
