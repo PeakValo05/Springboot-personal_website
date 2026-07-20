@@ -60,17 +60,18 @@
 .logo-name-container {
     display: flex;
     align-items: center;
-    gap: 5px;
+  
  
 }
 
 .logo-name-container p {
     margin: 0;
-    font-size: 30px;
+    font-size: 25px;
     font-family:'Sora', sans-serif;
     font-weight: bold;
     padding: 0;
-    margin-right: 80px;
+
+ 
 }
 .section-title {
     display: block;
