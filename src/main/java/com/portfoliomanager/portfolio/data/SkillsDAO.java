@@ -17,12 +17,14 @@ import com.portfoliomanager.portfolio.models.SkillsModel;
 public class SkillsDAO {
 
 
-    // Database connection details
-    private final String url = "jdbc:mysql://localhost:8889/skills_status";
+    // Database connection string
+    private final String url = "jdbc:mysql://localhost:8889/personal_website";
+    // Database username
     private final String user = "root";
+    // Database password
     private final String password = "root";
 
-
+  
 
 
 

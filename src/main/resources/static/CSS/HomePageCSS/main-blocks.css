@@ -46,7 +46,7 @@
     min-height: 75px;
     margin-bottom: 20px;
 }
-
+/* Container to hold the main blocks */
 .block-container {
     display: flex;
     justify-content: center;
@@ -55,33 +55,33 @@
     flex-shrink: 0;
     width: 60px;
     height: 60px;
-
+    
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
 }
-
+/* All the skill images on the skill block */
 .skills-image {
     width: 40px;
     height: 40px;
     object-fit: contain;
 }
-
+/* The text next to the skill image */
 .skill-info {
     flex: 1;
     padding-left: 30px;
     margin: 0;
 }
-
+/* The text next to the skill image */
 .skill-info h3 {
     margin-top: 8px;
     margin-bottom: 5px;
 }
-
+/* Skill percentage (right side of block) */
 .skill-percentage {
     font-weight: 400;
 }
-
+/* Progress bar (blue) of the circle */
 .circle-progress {
     --percentage: 0;
 
@@ -104,7 +104,7 @@
     );
     transform: translateY(-30px);
 }
-
+/* inner part of the progress bar */
 .circle-inner {
     display: flex;
     justify-content: center;
@@ -117,6 +117,7 @@
     background-color: white;
 }
 
+/* Text styling in the inner circle */
 .circle-inner span {
     font-size: 10px;
     font-weight: 600;
