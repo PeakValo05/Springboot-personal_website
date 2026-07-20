@@ -2,9 +2,9 @@
     display: flex;
     gap: 30px;
     padding-top: 30px;
-
+    padding-left: 385px;
     justify-content: flex-start;
-    padding-left: 385px; /* adjust this until it lines up */
+    align-items: flex-start;
 }
 
 .skills-block-container {
@@ -13,39 +13,113 @@
 }
 
 .skills-block {
-    width: 100%;
-    height: 500px;
+    width: 75%;
+    min-height: 1000px;
+    height: auto;
+    padding: 20px;
+    margin-left: auto;
     background: white;
-    box-shadow: 0 8px 25px rgba(0,0,0,.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
     border-radius: 10px;
     color: black;
+    box-sizing: border-box;
 }
-.skills-image{
-    object-fit: contain;
-    width: 40px;
-    height: 40px;
-   
+.education-block{
+    width: 125%;
+    min-height: 700px;
+    height: auto;
+    padding: 20px;
+    margin-left: auto;
+    background: white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    color: black;
+    box-sizing: border-box;
 }
-.skill-info{
-    padding-left: 50px;
-    margin: 0;
-}
-.skill-card{
+
+.skill-card {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
+
+    width: 100%;
+    min-height: 75px;
+    margin-bottom: 20px;
 }
-.skill-percentage{
-    font-weight: 400;
-}
-.block-container{
+
+.block-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 20px;
-    margin-top: 10px;
+
+    flex-shrink: 0;
     width: 60px;
-    border-radius: 10px;
     height: 60px;
+
     background-color: white;
-    box-shadow: 0 8px 25px rgba(0,0,0,.2);
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
+}
+
+.skills-image {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.skill-info {
+    flex: 1;
+    padding-left: 30px;
+    margin: 0;
+}
+
+.skill-info h3 {
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+.skill-percentage {
+    font-weight: 400;
+}
+
+.circle-progress {
+    --percentage: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+    align-self: flex-start;
+
+    width: 55px;
+    height: 55px;
+    margin-left: auto;
+
+    border-radius: 50%;
+
+    background: conic-gradient(
+        rgb(44, 128, 224) calc(var(--percentage) * 1%),
+        #e5e5e5 0
+    );
+    transform: translateY(-30px);
+}
+
+.circle-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+    background-color: white;
+}
+
+.circle-inner span {
+    font-size: 10px;
+    font-weight: 600;
+    
+
 }
