@@ -1,0 +1,51 @@
+.grouping-blocks {
+    display: flex;
+    gap: 30px;
+    padding-top: 30px;
+
+    justify-content: flex-start;
+    padding-left: 385px; /* adjust this until it lines up */
+}
+
+.skills-block-container {
+    flex: 1;
+    max-width: 810px;
+}
+
+.skills-block {
+    width: 100%;
+    height: 500px;
+    background: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,.2);
+    border-radius: 10px;
+    color: black;
+}
+.skills-image{
+    object-fit: contain;
+    width: 40px;
+    height: 40px;
+   
+}
+.skill-info{
+    padding-left: 50px;
+    margin: 0;
+}
+.skill-card{
+    display: flex;
+    flex-direction: row;
+}
+.skill-percentage{
+    font-weight: 400;
+}
+.block-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 60px;
+    border-radius: 10px;
+    height: 60px;
+    background-color: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,.2);
+}

@@ -33,10 +33,11 @@
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/header.css(v=4)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/table.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/animated-arrow.css}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/body-content-responsive.css(v=5)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/body-content-responsive.css(v=4)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/table-responsive.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons-responsive.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/mobile-btn.css(v=5)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/main-blocks.css(v=5)}">
 
 
 
@@ -53,9 +54,43 @@
         <div class="top-bar">
             <p class="top-bar-text">Jackson<br> Wiser</p>
             </div>
-       
+        </div>
+
+<div class="grouping-blocks">
+        <!--Block that hold all the skills-->
+    <div class="skills-block-container">
+        <div class="skills-block">
+
+
 
         </div>
+    </div>
+
+            <!--Block that hold all the education-->
+    <div class="skills-block-container">
+        <div class="skills-block">
+
+
+
+
+<div th:each="skill : ${skills}" class="skill-card">
+
+    <div class="block-container">
+    <img class="skills-image"
+         th:src="${skill.skillsImage}"
+         th:alt="${skill.name}">
+         </div>
+
+    <div class="skill-info">
+        <h3 th:text="${skill.name}"></h3>
+
+        <span>
+            <span class="skill-percentage" th:text="${skill.percentage}"></span>%
+        </span>
+    </div>
+</div>
+    </div>
+</div>
 
 
 
