@@ -9,39 +9,34 @@
 
 .skills-block-container {
     flex: 1;
-    max-width: 810px;
+    height: 500px;
 }
 
 .skills-block {
-    width: 75%;
-    min-height: 1000px;
-    height: auto;
+    height: 90%;
+    width: 30%;
+
+    overflow-y: auto;   /* Makes only this block scroll */
+
     padding: 20px;
-    margin-left: auto;
+    right: 0;
+    top: 0;
+    margin-top: 125px;
+    margin-right: 90px;
+    position: absolute;
     background: white;
     box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
     border-radius: 10px;
     color: black;
     box-sizing: border-box;
 }
-.education-block{
-    width: 125%;
-    min-height: 700px;
-    height: auto;
-    padding: 20px;
-    margin-left: auto;
-    background: white;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
-    border-radius: 10px;
-    color: black;
-    box-sizing: border-box;
-}
+
 
 .skill-card {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-
+    
     width: 100%;
     min-height: 75px;
     margin-bottom: 20px;
@@ -55,7 +50,7 @@
     flex-shrink: 0;
     width: 60px;
     height: 60px;
-    
+
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
@@ -123,4 +118,169 @@
     font-weight: 600;
     
 
+}
+/* container to hold the analytic info */
+.analytics-block-container {
+    width: 100%;
+    max-width: 810px;
+}
+/* analytic block */
+.analytics-block {
+    width: 102%;
+    padding: 30px;
+
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
+
+    box-sizing: border-box;
+}
+/* Analytic card */
+.analytics-card {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+/* Analytic label (left side of block) */
+.analytics-row {
+    width: 100%;
+}
+/* Analytic row (container for each analytic) */
+.analytics-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: black;
+}
+
+.analytics-bar {
+    width: 100%;
+    height: 14px;
+
+    background-color: #e5e5e5;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.analytics-fill {
+    height: 100%;
+    min-width: 4px;
+
+    background-color: rgb(44, 128, 224);
+    border-radius: 20px;
+
+    transition: width 0.8s ease;
+}
+
+.education-block-container {
+    width: 100%;
+    max-width: 810px;
+    height: 450px;
+}
+
+/* Education block */
+.education-block {
+    width: 100%;
+    height: 100%;
+  
+
+    padding: 30px;
+    margin-left: 385px;
+    margin-top: 30px;
+
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
+
+    box-sizing: border-box;
+}
+/* Education card */
+.education-card {
+    display: flex;
+    flex-direction: column;
+ 
+}
+/* Education name (left side of block) */
+.education-name {
+    font-weight: bold;
+    font-size: 15px;
+    color: black;
+}
+.education-location {
+    font-size: 15px;
+    color: rgb(44, 128, 224);
+    transform: translateY(-25px);
+    
+
+}
+.education-degree {
+    font-size: 15px;
+    color: black;
+    transform: translateY(-25px);
+}
+.education-years {
+    font-size: 15px;
+    color: black; 
+}
+.education-percentage {
+    font-size: 15px;
+    color: black; 
+
+}
+/* Progress bar (blue) of the circle */
+.education-circle-progress {
+    --percentage: 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+    align-self: flex-start;
+
+    width: 55px;
+    height: 55px;
+    margin-left: auto;
+
+    border-radius: 50%;
+
+    background: conic-gradient(
+        rgb(44, 128, 224) calc(var(--percentage) * 1%),
+        #e5e5e5 0
+    );
+    transform: translateY(-150px);
+}
+/* inner part of the progress bar */
+.education-circle-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+    background-color: white;
+}
+
+/* Text styling in the inner circle */
+.education-circle-inner span {
+    font-size: 10px;
+    font-weight: 600;
+    
+
+}
+.education-label {
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: black;
+    transform: translateY(-25px);
+    
 }

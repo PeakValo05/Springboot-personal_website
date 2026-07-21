@@ -6,6 +6,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.BiConsumer;
@@ -15,7 +16,7 @@ import com.portfoliomanager.portfolio.models.SkillsModel;
 
 
 
-public class SkillsDAO {
+public class AnalyticsDAO {
 
 
     // Database connection string
@@ -29,31 +30,34 @@ public class SkillsDAO {
 
 
 
-    public List<SkillsModel> getAllSkills(){
-        List<SkillsModel> skillsList = new ArrayList<>();
+    public List<AnalyticsModel> getAllAnalytics(){
+        List<AnalyticsModel> analyticsList = new ArrayList<>();
 
 
         // Establish a database connection and retrieve skills data
         try (Connection connection = DriverManager.getConnection(url, user, password)) {
-            String query = "SELECT * FROM skills";
+            String query = "SELECT * FROM analytics";
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
             // Iterate through the result set and create SkillsModel objects
             while (resultSet.next()) {
-                int skillsId = resultSet.getInt("SKILLS_ID");
-                String name = resultSet.getString("NAME");
-                BigDecimal percentage = resultSet.getBigDecimal("PERCENTAGE");
-                String skillsImage = resultSet.getString("SKILL_IMAGE");
+                int analyticsId = resultSet.getInt("ANALYTICS_ID");
+                int projectsCompleted = resultSet.getInt("PROJECTS_COMPLETED");
+                int repositories = resultSet.getInt("REPOSITORIES");
+                int languagesKnown = resultSet.getInt("LANGUAGES_KNOWN");
+                int commits = resultSet.getInt("COMMITS");
+                int yearsProgramming = resultSet.getInt("YEARS_PROGRAMMING");
+                int certifications = resultSet.getInt("CERTIFICATIONS");
+                LocalDate lastUpdated = resultSet.getDate("LAST_UPDATED").toLocalDate();
                 // Create a SkillsModel object and add it to the list
-                SkillsModel skill = new SkillsModel(skillsId, name, percentage, skillsImage);
-                skillsList.add(skill);
+                AnalyticsModel analytics = new AnalyticsModel(analyticsId, projectsCompleted, repositories, languagesKnown, commits, yearsProgramming, certifications, lastUpdated);
+                analyticsList.add(analytics);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return skillsList;
+        return analyticsList;
     }
-
     
 
 

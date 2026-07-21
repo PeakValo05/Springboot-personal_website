@@ -58,13 +58,137 @@
         </div>
 
 <div class="grouping-blocks">
-        <!--Block that hold all the education-->
-    <div class="skills-block-container">
-        <div class="education-block">
 
+    <div class="analytics-block-container">
+        <div class="analytics-block">
+
+            <div th:each="analytic : ${analytics}" class="analytics-card">
+
+                <!--Projects completed-->
+                <div class="analytics-row">
+                    <div class="analytics-label">
+                        <span>Projects Completed</span>
+                        <span th:text="${analytic.projectsCompleted} + '+'"></span>
+                    </div>
+
+                    <!--Fill bar-->
+                    <div class="analytics-bar">
+                        <div class="analytics-fill"
+                             th:style="'width: ' + ${analytic.projectsCompleted * 10} + '%'">
+                        </div>
+                    </div>
+                </div>
+
+                <!--Amount of repositories-->
+                <div class="analytics-row">
+                    <div class="analytics-label">
+                        <span>Repositories</span>
+                        <span th:text="${analytic.repositories} + '+'"></span>
+                    </div>
+
+                    <!--Fill bar-->
+                    <div class="analytics-bar">
+                        <div class="analytics-fill"
+                             th:style="'width: ' + ${analytic.repositories * 5} + '%'">
+                        </div>
+                    </div>
+                </div>
+
+                <!--Languages known-->
+                <div class="analytics-row">
+                    <div class="analytics-label">
+                        <span>Languages Known</span>
+                        <span th:text="${analytic.languagesKnown}"></span>
+                    </div>
+
+                    <!--Fill bar-->
+                    <div class="analytics-bar">
+                        <div class="analytics-fill"
+                             th:style="'width: ' + ${analytic.languagesKnown * 10} + '%'">
+                        </div>
+                    </div>
+                </div>
+
+                <!--Amount of commits-->
+                <div class="analytics-row">
+                    <div class="analytics-label">
+                        <span>Commits</span>
+                        <span th:text="${analytic.commits} + '+'"></span>
+                    </div>
+
+                    <!--Fill bar-->
+                    <div class="analytics-bar">
+                        <div class="analytics-fill"
+                             th:style="'width: ' + ${analytic.commits / 10} + '%'">
+                        </div>
+                    </div>
+                </div>
+
+                <!--Years of programming-->
+                <div class="analytics-row">
+                    <div class="analytics-label">
+                        <span>Years Programming</span>
+                        <span th:text="${analytic.yearsProgramming} + '+'"></span>
+                    </div>
+
+                    <!--Fill bar-->
+                    <div class="analytics-bar">
+                        <div class="analytics-fill"
+                             th:style="'width: ' + ${analytic.yearsProgramming * 20} + '%'">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
     </div>
+
+</div>
+<!-- Education block container -->
+<div class="education-block-container">
+    <div class="education-block">
+
+
+    <div class="education-label">
+        <h2 class="section-title">Education</h2>
+    </div>
+
+
+    <div th:each="education : ${educationList}" class="education-card">
+<!-- Education card -->
+    <div class="education-name">
+        <h3 th:text="${education.name}"></h3>
+    </div>
+<!-- Display the degree in a single line -->
+    <div class="education-degree">
+        <p th:text="${education.degree}"></p>
+    </div>
+
+<!-- Display the city and state in a single line -->
+    <div class="education-location">
+        <p th:text="${education.city} + ', ' + ${education.state}"></p>
+    </div>
+
+    <div class="education-circle-progress"
+        th:style="'--percentage: ' + ${education.percentage}">
+   
+
+        <div class="education-circle-inner">
+            <span th:text="${education.percentage}"></span>%
+        </div>
+        </div>
+</div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
 
             <!--Block that hold all the education-->
     <div class="skills-block-container">
@@ -78,16 +202,16 @@
          th:src="${skill.skillsImage}"
          th:alt="${skill.name}">
          </div>
-
+<!-- Skill name -->
     <div class="skill-info">
         <h3 th:text="${skill.name}"></h3>
 
 
-
+        <!-- Progress bar (blue) of the circle -->
         <div class="circle-progress"
             th:style="'--percentage: ' + ${skill.percentage}">
    
-
+<!-- Inner circle that displays the percentage -->
         <div class="circle-inner">
             <span th:text="${skill.percentage}"></span>%
         </div>

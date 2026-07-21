@@ -9,13 +9,15 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.BiConsumer;
+import com.portfoliomanager.portfolio.models.AnalyticsModel;
+import com.portfoliomanager.portfolio.models.EducationModel;
 
 import com.portfoliomanager.portfolio.models.AnalyticsModel;
 import com.portfoliomanager.portfolio.models.SkillsModel;
 
 
 
-public class SkillsDAO {
+public class EducationDAO {
 
 
     // Database connection string
@@ -29,29 +31,33 @@ public class SkillsDAO {
 
 
 
-    public List<SkillsModel> getAllSkills(){
-        List<SkillsModel> skillsList = new ArrayList<>();
+    public List<EducationModel> getAllEducation(){
+        List<EducationModel> educationList = new ArrayList<>();
 
 
         // Establish a database connection and retrieve skills data
         try (Connection connection = DriverManager.getConnection(url, user, password)) {
-            String query = "SELECT * FROM skills";
+            String query = "SELECT * FROM education";
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
-            // Iterate through the result set and create SkillsModel objects
+            // Iterate through the result set and create EducationModel objects
             while (resultSet.next()) {
-                int skillsId = resultSet.getInt("SKILLS_ID");
+                int educationId = resultSet.getInt("EDUCATION_ID");
                 String name = resultSet.getString("NAME");
+                int startYear = resultSet.getInt("START_YEAR");
+                int endYear = resultSet.getInt("END_YEAR");
+                String degree = resultSet.getString("DEGREE");
+                String city = resultSet.getString("CITY");
+                String state = resultSet.getString("STATE");
                 BigDecimal percentage = resultSet.getBigDecimal("PERCENTAGE");
-                String skillsImage = resultSet.getString("SKILL_IMAGE");
-                // Create a SkillsModel object and add it to the list
-                SkillsModel skill = new SkillsModel(skillsId, name, percentage, skillsImage);
-                skillsList.add(skill);
+                // Create an EducationModel object and add it to the list
+                EducationModel education = new EducationModel(educationId, name, startYear, endYear, degree, city, state, percentage);
+                educationList.add(education);
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return skillsList;
+        return educationList;
     }
 
     
