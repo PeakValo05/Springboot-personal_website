@@ -12,15 +12,15 @@ public class EducationModel {
 
     private int educationId;
     private String name;
-    private int startYear;
-    private int endYear;
+    private LocalDate startYear;
+    private LocalDate endYear;
     private String degree;
     private String city;
     private String state;
     private BigDecimal percentage;
 
 
-    public EducationModel(int educationId, String name, int startYear, int endYear, String degree, String city, String state, BigDecimal percentage) {
+    public EducationModel(int educationId, String name, LocalDate startYear, LocalDate endYear, String degree, String city, String state, BigDecimal percentage) {
 
 
         this.educationId = educationId;
@@ -50,19 +50,19 @@ public class EducationModel {
         this.name = name;
     }
 
-    public int getStartYear() {
+    public LocalDate getStartYear() {
         return startYear;
     }
 
-    public void setStartYear(int startYear) {
+    public void setStartYear(LocalDate startYear) {
         this.startYear = startYear;
     }
 
-    public int getEndYear() {
+    public LocalDate getEndYear() {
         return endYear;
     }
 
-    public void setEndYear(int endYear) {
+    public void setEndYear(LocalDate endYear) {
         this.endYear = endYear;
     }
 

@@ -11,7 +11,8 @@ import java.util.List;
 import java.util.function.BiConsumer;
 import com.portfoliomanager.portfolio.models.AnalyticsModel;
 import com.portfoliomanager.portfolio.models.EducationModel;
-
+import com.portfoliomanager.portfolio.models.SkillsModel;
+import java.time.LocalDate;
 import com.portfoliomanager.portfolio.models.AnalyticsModel;
 import com.portfoliomanager.portfolio.models.SkillsModel;
 
@@ -44,8 +45,8 @@ public class EducationDAO {
             while (resultSet.next()) {
                 int educationId = resultSet.getInt("EDUCATION_ID");
                 String name = resultSet.getString("NAME");
-                int startYear = resultSet.getInt("START_YEAR");
-                int endYear = resultSet.getInt("END_YEAR");
+                LocalDate startYear = resultSet.getDate("START_YEAR").toLocalDate();
+                LocalDate endYear = resultSet.getDate("END_YEAR").toLocalDate();
                 String degree = resultSet.getString("DEGREE");
                 String city = resultSet.getString("CITY");
                 String state = resultSet.getString("STATE");

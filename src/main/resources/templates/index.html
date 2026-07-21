@@ -24,7 +24,7 @@
 
 
 <!-- Links to my CSS files -->
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/bars.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/bars.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons.css(v=4)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/cards.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/header-responsive.css(v=4)}">
@@ -37,7 +37,7 @@
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/table-responsive.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons-responsive.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/mobile-btn.css(v=5)}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/main-blocks.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/main-blocks.css(v=5)}">
 
 
 
@@ -145,49 +145,52 @@
     </div>
 
 </div>
+
+
+
+
+
+
 <!-- Education block container -->
 <div class="education-block-container">
     <div class="education-block">
 
-
-    <div class="education-label">
-        <h2 class="section-title">Education</h2>
-    </div>
-
-
-    <div th:each="education : ${educationList}" class="education-card">
-<!-- Education card -->
-    <div class="education-name">
-        <h3 th:text="${education.name}"></h3>
-    </div>
-<!-- Display the degree in a single line -->
-    <div class="education-degree">
-        <p th:text="${education.degree}"></p>
-    </div>
-
-<!-- Display the city and state in a single line -->
-    <div class="education-location">
-        <p th:text="${education.city} + ', ' + ${education.state}"></p>
-    </div>
-
-    <div class="education-circle-progress"
-        th:style="'--percentage: ' + ${education.percentage}">
-   
-
-        <div class="education-circle-inner">
-            <span th:text="${education.percentage}"></span>%
+        <div class="education-label">
+            <h2 class="section-title">Education</h2>
         </div>
+
+        <div th:each="education : ${educationList}" class="education-card">
+
+            <!-- School name -->
+            <br><h3 class="education-name"
+                th:text="${education.name}"></h3>
+
+            <!-- Degree -->
+            <p class="education-degree"
+               th:text="${education.degree}"></p>
+
+            <!-- Years -->
+            <p class="education-years"
+               th:text="${education.startYear} + ' - ' + ${education.endYear}"></p>
+
+            <!-- Location -->
+            <p class="education-location"
+               th:text="${education.city} + ', ' + ${education.state}"></p>
+
+            <!-- Circular Progress -->
+            <div class="education-circle-progress"
+                 th:style="'--percentage:' + ${education.percentage}">
+
+                <div class="education-circle-inner">
+                    <span th:text="${education.percentage} + '%'"></span>
+                </div>
+
+            </div>
+
         </div>
-</div>
+
     </div>
 </div>
-
-
-
-
-
-
-
 
 
             <!--Block that hold all the education-->

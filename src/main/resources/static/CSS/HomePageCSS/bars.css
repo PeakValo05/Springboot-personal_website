@@ -25,7 +25,7 @@
 /* Top bar container & styling */
 .top-bar{
     display: flex;
-    width: 90%;
+    width: 89%;
     height: 75px;
     background-color: white;
     box-shadow: 0 8px 25px rgba(0,0,0,.2);
@@ -35,9 +35,11 @@
     align-items: center;
     gap: 10px;
 }
+/* Top bar text styling */
 .top-bar-text{
     color: black;
 }
+/* Top bar button styling */
 .top-bar-container{
     display: flex;
     justify-content: center;
@@ -57,13 +59,14 @@
    
     
 }
+/* PV logo container */
 .logo-name-container {
     display: flex;
     align-items: center;
   
  
 }
-
+/* PV logo name styling */
 .logo-name-container p {
     margin: 0;
     font-size: 25px;
@@ -73,6 +76,7 @@
 
  
 }
+/* PV logo name container */
 .section-title {
     display: block;
     color: grey;

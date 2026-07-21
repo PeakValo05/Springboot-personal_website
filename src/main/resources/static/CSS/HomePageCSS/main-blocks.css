@@ -1,82 +1,101 @@
+/* ==========================================================
+   MAIN LAYOUT
+   ========================================================== */
+
+/* Holds the analytics and skills sections */
 .grouping-blocks {
     display: flex;
     gap: 30px;
     padding-top: 30px;
     padding-left: 385px;
+
     justify-content: flex-start;
     align-items: flex-start;
 }
 
+
+/* ==========================================================
+   SKILLS SECTION
+   ========================================================== */
+
+/* Container for the skills card */
 .skills-block-container {
     flex: 1;
     height: 500px;
 }
 
+/* Main skills card */
 .skills-block {
-    height: 90%;
-    width: 30%;
-
-    overflow-y: auto;   /* Makes only this block scroll */
-
-    padding: 20px;
-    right: 0;
+    position: absolute;
     top: 0;
+    right: 0;
+
+    width: 30%;
+    height: 90%;
+
     margin-top: 125px;
     margin-right: 90px;
-    position: absolute;
+    padding: 20px;
+
+    overflow-y: auto;
+
     background: white;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
-    border-radius: 10px;
     color: black;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.2);
     box-sizing: border-box;
 }
 
-
+/* Individual skill */
 .skill-card {
     display: flex;
-    flex-direction: row;
     align-items: flex-start;
-    
+
     width: 100%;
     min-height: 75px;
     margin-bottom: 20px;
 }
-/* Container to hold the main blocks */
+
+/* Icon container */
 .block-container {
     display: flex;
     justify-content: center;
     align-items: center;
 
-    flex-shrink: 0;
     width: 60px;
     height: 60px;
+    flex-shrink: 0;
 
-    background-color: white;
+    background: white;
     border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
+    box-shadow: 0 8px 25px rgba(0,0,0,.2);
 }
-/* All the skill images on the skill block */
+
+/* Skill icon */
 .skills-image {
     width: 40px;
     height: 40px;
     object-fit: contain;
 }
-/* The text next to the skill image */
+
+/* Skill information */
 .skill-info {
     flex: 1;
     padding-left: 30px;
-    margin: 0;
 }
-/* The text next to the skill image */
+
 .skill-info h3 {
     margin-top: 8px;
     margin-bottom: 5px;
 }
-/* Skill percentage (right side of block) */
+
 .skill-percentage {
     font-weight: 400;
 }
-/* Progress bar (blue) of the circle */
+
+
+/* ---------- Circular Progress ---------- */
+
 .circle-progress {
     --percentage: 0;
 
@@ -84,22 +103,22 @@
     justify-content: center;
     align-items: center;
 
-    flex-shrink: 0;
-    align-self: flex-start;
-
     width: 55px;
     height: 55px;
+
     margin-left: auto;
+    flex-shrink: 0;
 
     border-radius: 50%;
 
     background: conic-gradient(
-        rgb(44, 128, 224) calc(var(--percentage) * 1%),
+        rgb(44,128,224) calc(var(--percentage) * 1%),
         #e5e5e5 0
     );
+
     transform: translateY(-30px);
 }
-/* inner part of the progress bar */
+
 .circle-inner {
     display: flex;
     justify-content: center;
@@ -108,142 +127,141 @@
     width: 45px;
     height: 45px;
 
+    background: white;
     border-radius: 50%;
-    background-color: white;
 }
 
-/* Text styling in the inner circle */
 .circle-inner span {
     font-size: 10px;
     font-weight: 600;
-    
-
 }
-/* container to hold the analytic info */
+
+
+/* ==========================================================
+   ANALYTICS SECTION
+   ========================================================== */
+
 .analytics-block-container {
     width: 100%;
     max-width: 810px;
 }
-/* analytic block */
+
 .analytics-block {
     width: 102%;
     padding: 30px;
 
-    background-color: white;
+    background: white;
     border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
+    box-shadow: 0 8px 25px rgba(0,0,0,.2);
 
     box-sizing: border-box;
 }
-/* Analytic card */
+
 .analytics-card {
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
-/* Analytic label (left side of block) */
+
 .analytics-row {
     width: 100%;
 }
-/* Analytic row (container for each analytic) */
+
 .analytics-label {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     margin-bottom: 8px;
+
     font-weight: 600;
-    color: black;
 }
 
 .analytics-bar {
     width: 100%;
     height: 14px;
 
-    background-color: #e5e5e5;
-    border-radius: 20px;
     overflow: hidden;
+
+    background: #e5e5e5;
+    border-radius: 20px;
 }
 
 .analytics-fill {
     height: 100%;
     min-width: 4px;
 
-    background-color: rgb(44, 128, 224);
+    background: rgb(44,128,224);
     border-radius: 20px;
 
-    transition: width 0.8s ease;
+    transition: width .8s ease;
 }
+
+
+
+
+
+
+
+/* ==========================================================
+   EDUCATION SECTION
+   ========================================================== */
 
 .education-block-container {
     width: 100%;
     max-width: 810px;
-    height: 450px;
 }
 
-/* Education block */
+/* Main education card */
 .education-block {
-    width: 100%;
-    height: 100%;
-  
-
-    padding: 30px;
-    margin-left: 385px;
+    width: 102%;
     margin-top: 30px;
+    margin-left: 385px;
+    padding: 30px;
 
-    background-color: white;
+    background: white;
     border-radius: 10px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
-
     box-sizing: border-box;
 }
-/* Education card */
+
+/* Individual school entry */
 .education-card {
+    position: relative;
     display: flex;
     flex-direction: column;
- 
+    gap: 15px;
+    padding-right: 80px;
+
 }
-/* Education name (left side of block) */
-.education-name {
-    font-weight: bold;
-    font-size: 15px;
-    color: black;
+
+/* Removes extra space after the final school */
+.education-card:last-child {
+  
 }
+/* School name, degree, years, and location */
+.education-name,
+.education-degree,
+.education-years,
 .education-location {
-    font-size: 15px;
-    color: rgb(44, 128, 224);
-    transform: translateY(-25px);
-    
+    margin: 0;
+    padding: 0;
+}
 
-}
-.education-degree {
-    font-size: 15px;
-    color: black;
-    transform: translateY(-25px);
-}
-.education-years {
-    font-size: 15px;
-    color: black; 
-}
-.education-percentage {
-    font-size: 15px;
-    color: black; 
-
-}
-/* Progress bar (blue) of the circle */
+/* Circular progress for education */
 .education-circle-progress {
     --percentage: 0;
-    
+
+    position: absolute;
+    top: 20px;
+    right: 0;
+
     display: flex;
     justify-content: center;
     align-items: center;
 
-    flex-shrink: 0;
-    align-self: flex-start;
-
-    width: 55px;
-    height: 55px;
-    margin-left: auto;
+    width: 80px;
+    height: 80px;
 
     border-radius: 50%;
 
@@ -251,36 +269,21 @@
         rgb(44, 128, 224) calc(var(--percentage) * 1%),
         #e5e5e5 0
     );
-    transform: translateY(-150px);
 }
-/* inner part of the progress bar */
+/* Inner circle for education progress */
 .education-circle-inner {
     display: flex;
     justify-content: center;
-    align-items: center;    
-
-    width: 45px;
-    height: 45px;
-
-    border-radius: 50%;
-    background-color: white;
-}
-
-/* Text styling in the inner circle */
-.education-circle-inner span {
-    font-size: 10px;
-    font-weight: 600;
-    
-
-}
-.education-label {
-    display: flex;
-
     align-items: center;
 
-    margin-bottom: 10px;
+    width: 60px;
+    height: 60px;
+
+    background: white;
+    border-radius: 50%;
+}
+/* Percentage text inside the inner circle */
+.education-circle-inner span {
+    font-size: 15px;
     font-weight: 600;
-    color: black;
-    transform: translateY(-25px);
-    
 }
