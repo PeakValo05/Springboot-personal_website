@@ -32,14 +32,54 @@
     font-family: 'Inter', sans-serif;
 
 }
+/* Specific styling for the "CONTACT" buttons */
+.linkedin-btn, 
+.github-btn, 
+.contact-btn, 
+.download-resume-btn, 
+.projects-btn {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    transition: transform .25s ease, filter .25s ease;
+    filter: brightness(0);
+}
+/* Specific styling for the "GITHUB" button */
+.github-btn{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    transition: transform .25s ease, filter .25s ease;
+    filter: brightness(0);
+}
+/* Specific styling for the "PHONE" button */
+.phone-btn{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    transition: transform .25s ease, filter .25s ease;
+    filter: brightness(0);
+}
+
+
+
 /* HOVER EFFECT for the NAV BUTTONS */
-.about-btn:hover, .connect-btn:hover, .contact-btn:hover, .download-resume-btn:hover, .projects-btn:hover{
+.about-btn:hover,
+.connect-btn:hover,
+.contact-btn:hover, 
+.download-resume-btn:hover, 
+.projects-btn:hover,
+.phone-btn:hover,
+.linkedin-btn:hover,
+.github-btn:hover{
 
     filter: brightness(0) invert(0.8);
     transform: translateY(-3px);
     
     
 }
+
+
 
 
 

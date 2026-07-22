@@ -24,8 +24,8 @@
 
 
 <!-- Links to my CSS files -->
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/bars.css(v=5)}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/bars.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/cards.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/header-responsive.css(v=4)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/content.css(v=4)}">
@@ -234,52 +234,73 @@
     
 <div class="side-bar-container">
 
+    <!-- Logo -->
     <div class="logo-name-container">
-        <img th:src="@{images/PVLogoBlack.png}" class="PV-logo">
+        <img th:src="@{/images/PVLogoBlack.png}" class="PV-logo" alt="PeaksValo Logo">
         <p>PeaksValo</p>
     </div>
 
-    
-
+    <!-- ================= Essentials ================= -->
     <span class="section-title">Essentials</span>
-    <div class="text-wrap">
-        <a th:href="@{#}">
-            <img th:src="@{SVG Images/laptop.svg}" class="projects-btn">
-        </a>
-        <p style="color: black">Projects</p>
-    </div>
 
     <div class="text-wrap">
-        <a th:href="@{/about}">
-            <img th:src="@{SVG Images/file-person-fill.svg}" class="about-btn">
+        <a th:href="@{/projects}">
+            <img th:src="@{/SVG Images/laptop.svg}" class="projects-btn" alt="Projects">
         </a>
-        <p style="color: black">About</p>
-    </div>
-
-    <div class="text-wrap">
-        <a th:href="@{/contact}">
-            <img th:src="@{SVG Images/envelope-arrow-down-fill.svg}" class="contact-btn">
-        </a>
-        <p style="color: black">Contact</p>
-    </div>
-
-    <div class="text-wrap">
-        <a th:href="@{/connect}">
-            <img th:src="@{SVG Images/person-lines-fill.svg}" class="connect-btn">
-        </a>
-        <p style="color: black">Connect</p>
+        <p style="color: black;">Projects</p>
     </div>
 
     <div class="text-wrap">
         <a th:href="@{/assets/Jackson's Resume.pdf}">
-            <img th:src="@{SVG Images/cloud-arrow-down-fill.svg}" class="download-resume-btn">
+            <img th:src="@{/SVG Images/cloud-arrow-down-fill.svg}" class="download-resume-btn" alt="Resume">
         </a>
-        <p style="color: black">Resume</p>
+        <p style="color: black;">Resume</p>
+    </div>
+
+    <!-- ================= Contact ================= -->
+    <span class="section-title">Contact</span>
+
+    <div class="text-wrap">
+        <a th:href="@{mailto:example@example.com}">
+            <img th:src="@{/SVG Images/envelope-at.svg}" class="contact-btn" alt="Email">
+        </a>
+        <p style="color: black;">Email</p>
+    </div>
+
+    <div class="text-wrap">
+        <a th:href="@{https://www.linkedin.com/in/jackson-wiser-1b0b3a1b6/}" target="_blank">
+            <img th:src="@{/SVG Images/linkedin-161-svgrepo-com.svg}" class="linkedin-btn" alt="LinkedIn">
+        </a>
+        <p style="color: black;">LinkedIn</p>
+    </div>
+
+    <div class="text-wrap">
+        <a th:href="@{https://github.com/PeakValo05}" target="_blank">
+            <img th:src="@{/SVG Images/github-142-svgrepo-com.svg}" class="github-btn" alt="GitHub">
+        </a>
+        <p style="color: black;">GitHub</p>
+    </div>
+
+   <div class="text-wrap">
+    <a href="tel:+14258797310">
+        <img th:src="@{/SVG Images/phonesvg.svg}" class="phone-btn" alt="Phone">
+    </a>
+    <p style="color: black;">(425) 879-7310</p>
+</div>
+
+<!-- ================= Work Experience ================= -->
+    <span class="section-title">Work Experience</span>
+    <div class="text-wrap">
+        <p>
+            <div class="text-wrap" style="font-weight: bold; font-family: 'Poppins', sans-serif; display: flex; flex-direction: column; align-items: flex-start;">
+       
+            <strong style="color: black;">Costco Wholesale</strong>
+            <span style="color: black; font-weight: normal;">Bakery</span>
+            <span style="color: black; font-weight: normal;">2023 - Present</span>
+        </p>
     </div>
 
 </div>
-
-
  
 
 

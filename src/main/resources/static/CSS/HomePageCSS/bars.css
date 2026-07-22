@@ -68,11 +68,11 @@
 }
 /* PV logo name styling */
 .logo-name-container p {
-    margin: 0;
+
     font-size: 25px;
     font-family:'Sora', sans-serif;
     font-weight: bold;
-    padding: 0;
+   
 
  
 }
@@ -80,7 +80,7 @@
 .section-title {
     display: block;
     color: grey;
-    transform: translateY(20px);
+
 }
 
 
@@ -90,7 +90,7 @@
     position: fixed;
     top: 0;
     left: 0;
-
+    
     width: 300px;
     height: 100vh;
 
@@ -99,7 +99,7 @@
     justify-content: flex-start;
     align-items: flex-start;
 
-    gap: 40px;
+    gap: 10px;
     padding: 40px 0 0 20px;
     box-sizing: border-box;
 

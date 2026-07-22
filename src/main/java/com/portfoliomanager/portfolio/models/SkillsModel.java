@@ -4,10 +4,10 @@ import java.math.BigDecimal;
 
 public class SkillsModel {
 
-    public int skillsId;
-    public String name;
-    public BigDecimal percentage;
-    public String skillsImage;
+    private int skillsId;
+    private String name;
+    private BigDecimal percentage;
+    private String skillsImage;
 
 
 
@@ -20,7 +20,7 @@ public class SkillsModel {
     }
 
     // Getters and Setters
-    public int skillsId() {
+    public int getSkillsId() {
         return skillsId;
     }
     public void setSkillsId(int skillsId) {
@@ -42,10 +42,10 @@ public class SkillsModel {
         this.percentage = percentage;
     }
 
-    public String getskillsImage() {
+    public String getSkillsImage() {
         return skillsImage;
     }
-    public void setFocus(String skillsImage) {
+    public void setSkillsImage(String skillsImage) {
         this.skillsImage = skillsImage; 
     }
 
