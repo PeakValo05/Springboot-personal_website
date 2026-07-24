@@ -23,6 +23,7 @@
     display: flex;
     align-items: center;   /* Vertically center the icon and text */
     gap: 12px; 
+    margin-top: 5px;             /* Space between the buttons */
              /* Space between icon and text */
 }
 
@@ -60,25 +61,64 @@
     transition: transform .25s ease, filter .25s ease;
     filter: brightness(0);
 }
+.projects-link, 
+.resume-link, 
+.contact-link, 
+.github-link, 
+.phone-link, .linkedin-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 
+    text-decoration: none;
+    color: black;
 
-
-/* HOVER EFFECT for the NAV BUTTONS */
-.about-btn:hover,
-.connect-btn:hover,
-.contact-btn:hover, 
-.download-resume-btn:hover, 
-.projects-btn:hover,
-.phone-btn:hover,
-.linkedin-btn:hover,
-.github-btn:hover{
-
-    filter: brightness(0) invert(0.8);
-    transform: translateY(-3px);
-    
-    
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+/* Change the color of the text on hover */
+.projects-link span, 
+.resume-link span, 
+.contact-link span, 
+.github-link span,
+.phone-link span,
+.linkedin-link span {
+    color: inherit;
+    transition: color 0.25s ease;
 }
 
+/* Move the entire link slightly upward */
+.projects-link:hover, 
+.resume-link:hover, 
+.contact-link:hover, 
+.github-link:hover,
+.phone-link:hover,
+.linkedin-link:hover {
+    transform: translateY(-3px);
+    color: #2C80E0;
+}
+/* Move the text slightly upward */
+.projects-link img, 
+.resume-link img, 
+.contact-link img, 
+.github-link img,
+.phone-link img,
+.linkedin-link img {
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+/* Scale and recolor only the icon */
+.projects-link:hover img, 
+.resume-link:hover img, 
+.contact-link:hover img, 
+.github-link:hover img,
+.phone-link:hover img,
+.linkedin-link:hover img {
+    transform: scale(1.2);
+
+    filter:
+    brightness(0) saturate(100%) invert(43%) sepia(85%) saturate(1815%) hue-rotate(192deg) brightness(94%) contrast(87%);
+
+}
 
 
 

@@ -41,21 +41,5 @@ public String home(Model model) {
     model.addAttribute("educationList", educationList);
 
     return "index";
-}
-
-// about page mapping
-    @GetMapping("/about")
-    public String about() {
-        return "about-page";
     }
-// connect page mapping
-    @GetMapping("/connect")
-    public String connect() {
-        return "connect";
-    }
-// contact page mapping
-    @GetMapping("/contact")
-    public String contact() {
-        return "contact-page";
-    } 
 }

@@ -136,9 +136,9 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-
+    gap: 5px;
     
-    padding: 160px 0 0 20px;
+    padding: 140px 0 0 20px;
     box-sizing: border-box;
 
     border-right: 1px solid rgba(255,255,255,.15);
@@ -157,7 +157,8 @@
 .text-wrap-experience {
     display: flex;
     align-items: flex-start;
-    gap: 5px;
+
+    transform: translateY(-20px);    
     flex-direction: column;
 }
 .text-wrap-contact {
@@ -176,13 +177,16 @@
     gap: 5px;
     margin: 5px 0;
 }
+/* Adjust the margin for the skills text */
 .text-wrap-skills {
     display: flex;
     align-items: center;
-    flex-direction: row;
     flex-wrap: wrap;
-    gap: 5px;
+    transform: translateY(-9px);   
     margin: 5px 0;
 }
-
+/* Adjust the margin for the skills text */
+.text-wrap-skills p {
+    margin: 10px 6px 0 0;
+}
 
