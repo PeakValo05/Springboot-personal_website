@@ -58,8 +58,9 @@
     height: 100px;
     object-fit: contain;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 10px;
+    left: 10px;
+    padding-left: 10px;
    
     
 }
@@ -129,23 +130,24 @@
     top: 0;
     left: 0;
     
+ 
     width: 300px;
     height: 100vh;
-    
+
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: flex-start;
     gap: 5px;
-    
-    padding: 140px 0 0 20px;
+
+    padding: 140px 0 20px 20px;
     box-sizing: border-box;
 
-    border-right: 1px solid rgba(255,255,255,.15);
-    background: rgba(255,255,255,.08);
-    backdrop-filter: blur(10px);
+    overflow-y: scroll;
 
-    box-shadow: 0 8px 25px rgba(0,0,0,.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 .self-image{
     width: 35px;
@@ -189,4 +191,42 @@
 .text-wrap-skills p {
     margin: 10px 6px 0 0;
 }
-
+/* Adjust the margin for the search container */
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 5px 0;
+    margin-right: auto; /* Adjust this value to move the search bar left or right */
+    padding-left: 20px;
+}
+/* Adjust the margin for the search container */
+.search-box {
+    width: 350px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+/* Placeholder styling for the search box */
+.search-box::placeholder {
+    color: gray;
+    font-style: italic;
+}
+/* Settings icon styling */
+.settings-icon {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    cursor: pointer;
+}
+.settings-block {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Adjust this value to move the settings icon left or right */
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,.2);
+}

@@ -23,7 +23,7 @@
     display: flex;
     align-items: center;   /* Vertically center the icon and text */
     gap: 12px; 
-    margin-top: 5px;             /* Space between the buttons */
+           /* Space between the buttons */
              /* Space between icon and text */
 }
 

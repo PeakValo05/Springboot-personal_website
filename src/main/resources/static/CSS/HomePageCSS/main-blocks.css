@@ -2,6 +2,19 @@
    MAIN LAYOUT
    ========================================================== */
 
+   html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+   }
+
 /* Holds the analytics and skills sections */
 .grouping-blocks {
     display: flex;
@@ -9,8 +22,12 @@
     padding-top: 30px;
     padding-left: 385px;
 
+    padding-bottom: 30px;
+    padding-right: 90px;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
+    
 }
 
 
@@ -21,20 +38,18 @@
 /* Container for the skills card */
 .skills-block-container {
     flex: 1;
-    height: 500px;
-}
+    height: 460px;
 
+    display: flex;
+    flex-direction: column;
+}
 /* Main skills card */
 .skills-block {
-    position: absolute;
-    top: 0;
-    right: 0;
 
-    width: 30%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
 
-    margin-top: 125px;
-    margin-right: 90px;
+    margin-bottom: auto;
     padding: 20px;
 
     overflow-y: auto;
@@ -143,11 +158,12 @@
 
 .analytics-block-container {
     width: 100%;
-    max-width: 810px;
+    max-width: 1450px;
+    flex: 0 0 1430px;
 }
 
 .analytics-block {
-    width: 102%;
+    width: 100%;
     padding: 30px;
 
     background: white;
@@ -214,11 +230,10 @@
 
 /* Main education card */
 .education-block {
-    width: 102%;
-    margin-top: 30px;
-    margin-left: 385px;
+    width: 100%;
     padding: 30px;
-
+   
+    margin-right: auto;
     background: white;
     border-radius: 10px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
@@ -287,4 +302,35 @@
 .education-circle-inner span {
     font-size: 15px;
     font-weight: 600;
+}
+
+/* ==========================================================
+   FOOTER SECTION
+   ========================================================== */
+.footer-container {
+  
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(10px);
+
+}
+.footer {
+
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
+    box-sizing: border-box;
+
 }

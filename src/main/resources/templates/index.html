@@ -24,7 +24,7 @@
 
 
 <!-- Links to my CSS files -->
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/bars.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/bars.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons.css(v=4)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/cards.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/header-responsive.css(v=4)}">
@@ -36,8 +36,8 @@
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/body-content-responsive.css(v=4)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/table-responsive.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons-responsive.css(v=5)}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/mobile-btn.css(v=5)}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/main-blocks.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/mobile-btn.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/main-blocks.css(v=5)}">
 
 
 
@@ -52,8 +52,27 @@
         <div class="top-bar-container">
                <!--Top bar with name profile pic, etc-->
         <div class="top-bar">
+<!--Search bar-->
+        <div class="search-container">
+            <form id="search-form" class="search-form" action="/submit" method="GET">
+                <input 
+                class="search-box"
+                type="text" 
+                id="search-box" 
+                name="search" 
+                placeholder="Search projects, email, resume...">
+            </form>
+        </div>
+
+
             <img th:src="@{images/SelfImage.jpeg}" class="self-image">
             <p class="top-bar-text">Jackson<br> Wiser</p>
+
+        <!--Settings icon-->
+        <div class="settings-block">
+            <img th:src="@{/SVG Images/settings-svgrepo-com.svg}" class="settings-icon" alt="Settings Icon">
+        </div>
+
             </div>
         </div>
 
@@ -138,9 +157,6 @@
                         </div>
                     </div>
                 </div>
-
-            </div>
-
         </div>
     </div>
 
@@ -217,17 +233,14 @@
 <!-- Inner circle that displays the percentage -->
         <div class="circle-inner">
             <span th:text="${skill.percentage}"></span>%
+            </div>
         </div>
-        </div>
-
-
-
-
-
     </div>
 </div>
-    </div>
 </div>
+
+
+
 
 
 
@@ -237,7 +250,7 @@
     <!-- ================= Logo ================= -->
     <div class="logo-name-container">
         <img
-            th:src="@{/images/PVLogoBlack.png}"
+            th:src="@{/images/PV Logo.png}"
             class="PV-logo"
             alt="PeaksValo Logo">
 
@@ -404,6 +417,18 @@
 
     </div>
 
+    <!-- Footer -->
+    <div class="footer-container">
+<div class="footer">
+    <p>&copy; 2024 Jackson Wiser. All rights reserved.</p>
+</div>
+</div>
+    </div>
+</div>
+
+
+
+
 </div>
  
 
@@ -441,17 +466,8 @@
         
             
 
-
-
-                    <!--Scroll to bottom of main page-->
-    <section>
-        <div class="arrow-container">
-       <button id="scrollBottomBtn" class="scroll-bottom">
-            <img th:src="@{/SVG Images/chevron-double-down.svg}" class="arrow-icon" alt="Scroll Down">
-       </button>
             
-        </button>
-
+       
     </div>
 </section>
 
@@ -470,48 +486,89 @@
 
 <!--SCRIPTS-->
 
-<!--Scroll top function-->
 <script>
+    document.getElementById("search-form").addEventListener("submit", function(e){
+        e.preventDefault();
+        // Add your search handling logic here
+        const query = document.getElementById("search-box").value;
+        
 
-const scrollTopBtn = document.getElementById("scrollTopBtn");
+        // Example: Redirect to a search results page or perform an action based on the query
+        if (
+            // Check for keywords related to projects, repositories, or code
+            query.includes("projects") ||
+            query.includes("Projects") ||
+            query.includes("project") ||
+            query.includes("Project") ||
+            query.includes("repository") ||
+            query.includes("Repository") ||
+            query.includes("repo") ||
+            query.includes("Repo") ||
+            query.includes("code") ||
+            query.includes("Code") ||
+            query.includes("source") ||
+            query.includes("Source") ||
+            query.includes("github") ||
+            query.includes("GitHub") ||
+            query.includes("repo") ||
+            query.includes("Repo") ||
+            query.includes("projct") ||
+            query.includes("Projct") ||
+            query.includes("Repository")
+        ){
+            window.open("https://github.com/PeakValo05?tab=repositories");
+        } else if (
+            query.includes("resume") ||
+            query.includes("Resume") ||
+            query.includes("cv") ||
+            query.includes("resme") ||
+            query.includes("Resme") ||
+            query.includes("ResMe") ||
+            query.includes("About") ||
+            query.includes("rsume")
+        ) {
+            // Open the resume PDF in a new tab
+            window.open("/assets/Jackson's Resume.pdf");
 
-scrollTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+
+        } else if (
+            query.includes("contact") ||
+            query.includes("Contact") ||
+            query.includes("email") ||
+            query.includes("Email") ||
+            query.includes("reach out") ||
+            query.includes("Reach Out") ||
+            query.includes("get in touch") ||
+            query.includes("Get in Touch") ||
+            query.includes("Contact Me") ||
+            query.includes("contact me") ||
+            query.includes("jwiser.dev") ||
+            query.includes("gmail.com") ||
+            query.includes("email me") ||
+            query.includes("Email Me") ||
+            query.includes("jwiser.dev@gmail.com") ||
+            query.includes("Contact")
+        ) {
+    window.open(
+        "https://mail.google.com/mail/?view=cm&fs=1&to=jwiser.dev@gmail.com",
+        "_blank"
+    );
+        }
+        else {
+            // If no results found, you can show an alert or handle it as needed
+            alert("No results found for your query.");
+        }
     });
-});
-
 </script>
 
 
 
-<!--Scroll down function-->
-<script>
-
-const scrollBottomBtn = document.getElementById("scrollBottomBtn");
-
-scrollBottomBtn.addEventListener("click", () => {
-    window.scrollTo({
-        top: document.documentElement.scrollHeight,
-        behavior: "smooth"
-    });
-});
-
-</script>
-    
 
 
-    <!-- Hamburger Menu Script -->
-    <script>
-const burger = document.getElementById("hamburger-btn");
-const mobileMenu = document.querySelector(".mobile-menu");
 
-burger.addEventListener("click", () => {
-    console.log("clicked");
-    mobileMenu.classList.toggle("active");
-});
-    </script>
+
+
+
 
 </body>
 
