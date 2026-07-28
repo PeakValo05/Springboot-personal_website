@@ -24,7 +24,7 @@
 
 
 <!-- Links to my CSS files -->
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/bars.css(v=5)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/bars.css(v=4)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons.css(v=4)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/cards.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/header-responsive.css(v=4)}">
@@ -37,7 +37,7 @@
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/table-responsive.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons-responsive.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/mobile-btn.css(v=4)}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/main-blocks.css(v=5)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/main-blocks.css(v=4)}">
 
 
 
@@ -65,6 +65,9 @@
         </div>
 
 
+        <img th:src="@{/SVG Images/messages-1-svgrepo-com.svg}" class="messages-icon" alt="Messages Icon">
+        <!-- Bell icon -->
+        <img th:src="@{/SVG Images/bell-svgrepo-com.svg}" class="bell-icon" alt="Bell Icon">
             <img th:src="@{images/SelfImage.jpeg}" class="self-image">
             <p class="top-bar-text">Jackson<br> Wiser</p>
 
@@ -81,86 +84,40 @@
     <div class="analytics-block-container">
         <div class="analytics-block">
 
-            <div th:each="analytic : ${analytics}" class="analytics-card">
+<div th:each="analytic : ${analytics}" class="analytics-grid">
 
-                <!--Projects completed-->
-                <div class="analytics-row">
-                    <div class="analytics-label">
-                        <span>Projects Completed</span>
-                        <span th:text="${analytic.projectsCompleted} + '+'"></span>
-                    </div>
-
-                    <!--Fill bar-->
-                    <div class="analytics-bar">
-                        <div class="analytics-fill"
-                             th:style="'width: ' + ${analytic.projectsCompleted * 10} + '%'">
-                        </div>
-                    </div>
-                </div>
-
-                <!--Amount of repositories-->
-                <div class="analytics-row">
-                    <div class="analytics-label">
-                        <span>Repositories</span>
-                        <span th:text="${analytic.repositories} + '+'"></span>
-                    </div>
-
-                    <!--Fill bar-->
-                    <div class="analytics-bar">
-                        <div class="analytics-fill"
-                             th:style="'width: ' + ${analytic.repositories * 5} + '%'">
-                        </div>
-                    </div>
-                </div>
-
-                <!--Languages known-->
-                <div class="analytics-row">
-                    <div class="analytics-label">
-                        <span>Languages Known</span>
-                        <span th:text="${analytic.languagesKnown}"></span>
-                    </div>
-
-                    <!--Fill bar-->
-                    <div class="analytics-bar">
-                        <div class="analytics-fill"
-                             th:style="'width: ' + ${analytic.languagesKnown * 10} + '%'">
-                        </div>
-                    </div>
-                </div>
-
-                <!--Amount of commits-->
-                <div class="analytics-row">
-                    <div class="analytics-label">
-                        <span>Commits</span>
-                        <span th:text="${analytic.commits} + '+'"></span>
-                    </div>
-
-                    <!--Fill bar-->
-                    <div class="analytics-bar">
-                        <div class="analytics-fill"
-                             th:style="'width: ' + ${analytic.commits / 10} + '%'">
-                        </div>
-                    </div>
-                </div>
-
-                <!--Years of programming-->
-                <div class="analytics-row">
-                    <div class="analytics-label">
-                        <span>Years Programming</span>
-                        <span th:text="${analytic.yearsProgramming} + '+'"></span>
-                    </div>
-
-                    <!--Fill bar-->
-                    <div class="analytics-bar">
-                        <div class="analytics-fill"
-                             th:style="'width: ' + ${analytic.yearsProgramming * 20} + '%'">
-                        </div>
-                    </div>
-                </div>
-        </div>
+    <div class="analytics-card">
+        <h2 th:text="${analytic.projectsCompleted} + '+'"></h2>
+        <p>Projects Completed</p>
+        <img th:src="@{/SVG Images/folder-open-svgrepo-com.svg}" class="folder-icon" alt="Folder Icon">
     </div>
 
-</div>
+    <div class="analytics-card">
+        <h2 th:text="${analytic.repositories} + '+'"></h2>
+        <p>Repositories</p>
+        <img th:src="@{/SVG Images/github-svgrepo-com.svg}" class="repo-icon" alt="Repo Icon">
+    </div>
+
+    <div class="analytics-card">
+        <h2 th:text="${analytic.languagesKnown}"></h2>
+        <p>Languages Known</p>
+        <img th:src="@{/SVG Images/code-svgrepo-com.svg}" class="code-icon" alt="Code Icon">
+    </div>
+
+    <div class="analytics-card">
+        <h2 th:text="${analytic.commits} + '+'"></h2>
+        <p>Commits</p>
+        <img th:src="@{/SVG Images/git-commit-svgrepo-com.svg}" class="commit-icon" alt="Commit Icon">
+    </div>
+
+    <div class="analytics-card">
+        <h2 th:text="${analytic.yearsProgramming} + '+'"></h2>
+        <p>Years Programming</p>
+        <img th:src="@{/SVG Images/calendar-today-svgrepo-com.svg}" class="years-icon" alt="Years Icon">
+    </div>
+</div> <!-- Close analytics-grid -->
+</div> <!-- Close analytics-block -->
+</div> <!-- Close analytics-block-container -->
 
 
 
@@ -485,7 +442,6 @@
 
 
 <!--SCRIPTS-->
-
 <script>
     document.getElementById("search-form").addEventListener("submit", function(e){
         e.preventDefault();
