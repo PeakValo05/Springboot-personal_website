@@ -219,6 +219,7 @@
     height: 25px;
     object-fit: contain;
     cursor: pointer;
+    filter: brightness(0);
 }
 /* Settings block styling */
 .settings-block {
@@ -239,6 +240,7 @@
     object-fit: contain;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
+    filter: brightness(0);
 }
 /* Hover effect for bell and messages icons */
 .bell-icon:hover, .messages-icon:hover {

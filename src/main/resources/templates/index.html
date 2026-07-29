@@ -24,7 +24,7 @@
 
 
 <!-- Links to my CSS files -->
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/bars.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/bars.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons.css(v=4)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/cards.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/header-responsive.css(v=4)}">
@@ -38,6 +38,7 @@
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons-responsive.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/mobile-btn.css(v=4)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/main-blocks.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/settings.css(v=4)}">
 
 
 
@@ -71,13 +72,98 @@
             <img th:src="@{images/SelfImage.jpeg}" class="self-image">
             <p class="top-bar-text">Jackson<br> Wiser</p>
 
-        <!--Settings icon-->
-        <div class="settings-block">
-            <img th:src="@{/SVG Images/settings-svgrepo-com.svg}" class="settings-icon" alt="Settings Icon">
-        </div>
 
+
+<!-- ================= Settings ================= -->
+<div class="settings-block">
+
+    <!-- Settings Button -->
+    <div class="settings-button-container">
+        <button
+            type="button"
+            id="settingsButton"
+            class="settings-button"
+            aria-expanded="false"
+            aria-controls="settingsPanel">
+
+            <i class="bi bi-gear-fill"></i>
+            <img th:src="@{/SVG Images/settings-svgrepo-com.svg}"
+                 class="settings-icon"
+                 alt="Settings Icon">
+        </button>
+
+        <!-- Settings Panel -->
+        <div id="settingsPanel" class="settings-panel">
+
+            <!-- Header -->
+            <div class="settings-header">
+                <img th:src="@{/SVG Images/settings-svgrepo-com.svg}"
+                     class="settings-panel-icon"
+                     alt="Settings Icon">
+
+                <h3 style="margin: 0;">Settings</h3>
+
+                <img th:src="@{/SVG Images/exit-arrow-svgrepo-com.svg}"
+                     class="exit-settings-icon"
+                     alt="Close Settings">
             </div>
-        </div>
+
+            <!-- Settings Content -->
+            <div class="settings-content-container">
+
+                <hr class="subtle-divider"></hr>
+
+
+
+                <div class="left-settings">
+                <hr class="left-subtle-divider"></hr>
+                </div>
+
+
+                <!-- Theme -->
+                <label for="theme" class="settings-label">
+                    Theme:
+                </label>
+
+                <select id="theme" name="theme" class="settings-select">
+                    <option value="light" selected>Light</option>
+                    <option value="dark">Dark</option>
+                </select>
+
+                <!-- Animations -->
+                <label for="animation" class="settings-label settings-checkbox">
+                    <input
+                        type="checkbox"
+                        id="animation"
+                        name="animation">
+
+                    Enable Animations
+                </label>
+
+       
+                    
+
+
+                <!-- Save Button -->
+                <button type="button" class="save-settings">
+                    Save
+                </button>
+
+        
+
+            </div> <!-- /.settings-content-container -->
+
+        </div> <!-- /.settings-panel -->
+
+    </div> <!-- /.settings-button-container -->
+
+</div> <!-- /.settings-block -->
+</div> <!-- Close top-bar -->
+</div> <!-- Close top-bar-container -->
+
+
+
+
 
 <div class="grouping-blocks">
 
@@ -514,6 +600,27 @@
             // If no results found, you can show an alert or handle it as needed
             alert("No results found for your query.");
         }
+    });
+</script>
+
+<script>
+    const settingsButton = document.getElementById("settingsButton");
+    const settingsPanel = document.getElementById("settingsPanel");
+
+    settingsButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+
+        const isOpen = settingsPanel.classList.toggle("open");
+        settingsButton.setAttribute("aria-expanded", isOpen);
+    });
+
+    settingsPanel.addEventListener("click", function (event) {
+        event.stopPropagation();
+    });
+
+    document.addEventListener("click", function () {
+        settingsPanel.classList.remove("open");
+        settingsButton.setAttribute("aria-expanded", "false");
     });
 </script>
 
