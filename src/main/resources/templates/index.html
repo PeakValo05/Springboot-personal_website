@@ -38,7 +38,7 @@
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons-responsive.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/mobile-btn.css(v=4)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/main-blocks.css(v=4)}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/settings.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/settings.css(v=5)}">
 
 
 
@@ -79,6 +79,7 @@
 
     <!-- Settings Button -->
     <div class="settings-button-container">
+
         <button
             type="button"
             id="settingsButton"
@@ -86,80 +87,110 @@
             aria-expanded="false"
             aria-controls="settingsPanel">
 
-            <i class="bi bi-gear-fill"></i>
-            <img th:src="@{/SVG Images/settings-svgrepo-com.svg}"
-                 class="settings-icon"
-                 alt="Settings Icon">
+            <img
+                th:src="@{/SVG Images/settings-svgrepo-com.svg}"
+                class="settings-icon"
+                alt="Open Settings">
         </button>
 
         <!-- Settings Panel -->
         <div id="settingsPanel" class="settings-panel">
 
-            <!-- Header -->
+            <!-- Settings Header -->
             <div class="settings-header">
-                <img th:src="@{/SVG Images/settings-svgrepo-com.svg}"
-                     class="settings-panel-icon"
-                     alt="Settings Icon">
 
-                <h3 style="margin: 0;">Settings</h3>
+                <img
+                    th:src="@{/SVG Images/settings-svgrepo-com.svg}"
+                    class="settings-panel-icon"
+                    alt="Settings Icon">
 
-                <img th:src="@{/SVG Images/exit-arrow-svgrepo-com.svg}"
-                     class="exit-settings-icon"
-                     alt="Close Settings">
-            </div>
+                <h3>Settings</h3>
+
+                <img
+                    th:src="@{/SVG Images/exit-arrow-svgrepo-com.svg}"
+                    class="exit-settings-icon"
+                    alt="Close Settings">
+            </div> <!-- Close settings-header -->
 
             <!-- Settings Content -->
             <div class="settings-content-container">
 
-                <hr class="subtle-divider"></hr>
+                <!-- Horizontal Divider -->
+                <hr class="subtle-divider">
+
+                <!-- Two-Column Settings Layout -->
+                <div class="settings-layout">
+
+                    <!-- Left Settings -->
+                    <div class="left-settings"></div>
+
+                    <!-- Vertical Divider -->
+                    <div class="left-subtle-divider"></div>
 
 
 
-                <div class="left-settings">
-                <hr class="left-subtle-divider"></hr>
-                </div>
 
 
-                <!-- Theme -->
-                <label for="theme" class="settings-label">
-                    Theme:
-                </label>
+<!-- Right Settings -->
+<div class="right-settings">
 
-                <select id="theme" name="theme" class="settings-select">
-                    <option value="light" selected>Light</option>
-                    <option value="dark">Dark</option>
-                </select>
+    <!-- Theme Setting -->
+    <div class="card-block">
 
-                <!-- Animations -->
-                <label for="animation" class="settings-label settings-checkbox">
-                    <input
-                        type="checkbox"
-                        id="animation"
-                        name="animation">
+        <label for="theme" class="settings-label">
+            Theme
+        </label>
 
-                    Enable Animations
-                </label>
+        <p class="settings-description">
+            Choose how the website looks.
+        </p>
 
-       
-                    
+        <select id="theme" name="theme" class="settings-select">
+            <option value="light" selected>Light</option>
+            <option value="dark">Dark</option>
+        </select>
 
+    </div>
+
+    <!-- Animation Setting -->
+    <div class="card-block">
+
+        <label class="settings-checkbox" for="animation">
+
+            <input
+                type="checkbox"
+                id="animation"
+                name="animation"
+                class="settings-checkbox-input">
+
+            Enable Animations
+
+        </label>
+
+    </div>
+</div> <!-- Close right-settings -->
+
+
+                </div> <!-- Close settings-layout -->
 
                 <!-- Save Button -->
                 <button type="button" class="save-settings">
                     Save
                 </button>
 
-        
+            </div>
 
-            </div> <!-- /.settings-content-container -->
+        </div>
 
-        </div> <!-- /.settings-panel -->
+    </div>
 
-    </div> <!-- /.settings-button-container -->
+</div>
 
-</div> <!-- /.settings-block -->
-</div> <!-- Close top-bar -->
-</div> <!-- Close top-bar-container -->
+<!-- Close top bar -->
+</div>
+
+<!-- Close top bar container -->
+</div>
 
 
 
