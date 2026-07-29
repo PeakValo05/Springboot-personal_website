@@ -41,7 +41,7 @@
     width: 40%;
     max-width: 650px;
     min-width: 400px;
-    height: 500px;
+    height: 600px;
 
     padding: 20px;
 
@@ -143,9 +143,29 @@
 .right-settings {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
 
     flex: 1;
+}
+.animation-card-block, 
+.bg-card-block,
+.font-size-card-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+
+    width: 100%;
+
+    min-height: 135px;
+    min-width: 350px;
+    padding: 15px;
+
+    background-color: #ffffff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+
+    box-sizing: border-box;
 }
 .right-settings-label {
     display: flex;

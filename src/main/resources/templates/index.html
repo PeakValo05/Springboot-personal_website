@@ -37,8 +37,9 @@
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/table-responsive.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/buttons-responsive.css(v=5)}">
 <link rel="stylesheet" th:href="@{/CSS/HomePageCSS/mobile-btn.css(v=4)}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/main-blocks.css(v=4)}">
-<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/settings.css(v=5)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/main-blocks.css(v=5)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/settings.css(v=4)}">
+<link rel="stylesheet" th:href="@{/CSS/HomePageCSS/theme.css(v=4)}">
 
 
 
@@ -135,38 +136,66 @@
 <div class="right-settings">
 
     <!-- Theme Setting -->
-    <div class="card-block">
+    <div class="bg-card-block">
 
         <label for="theme" class="settings-label">
-            Theme
+            Light/Dark Theme
         </label>
 
         <p class="settings-description">
-            Choose how the website looks.
+            Choose between light and dark themes for the website.
         </p>
 
         <select id="theme" name="theme" class="settings-select">
             <option value="light" selected>Light</option>
             <option value="dark">Dark</option>
         </select>
+</div> <!-- Close light/dark theme card-block -->
 
-    </div>
 
-    <!-- Animation Setting -->
-    <div class="card-block">
 
-        <label class="settings-checkbox" for="animation">
 
-            <input
-                type="checkbox"
-                id="animation"
-                name="animation"
-                class="settings-checkbox-input">
+        <hr class="subtle-divider">
 
-            Enable Animations
+    <div class="animation-card-block">
 
+        <label for="animation" class="settings-label">
+            Animation
         </label>
 
+        <p class="settings-description">
+            Enable or disable animations on the website.
+        </p>
+
+
+        <select id="animation" name="animation" class="settings-select">
+            <option value="enabled" selected>Enabled</option>
+            <option value="disabled">Disabled</option>
+        </select>
+
+        
+    </div>
+
+    <hr class="subtle-divider">
+
+    <!-- Font Size Setting -->
+    <div class="font-size-card-block">
+
+        <label for="font-size" class="settings-label">
+            Font Size
+        </label>
+
+        <p class="settings-description">
+            Adjust the font size for the website.
+        </p>
+
+        <select id="font-size" name="font-size" class="settings-select">
+            <option value="small">Small</option>
+            <option value="medium" selected>Medium</option>
+            <option value="large">Large</option>
+        </select>
+
+        </div> <!-- Close font size card-block -->
     </div>
 </div> <!-- Close right-settings -->
 
@@ -494,7 +523,7 @@
     <!-- Footer -->
     <div class="footer-container">
 <div class="footer">
-    <p>&copy; 2024 Jackson Wiser. All rights reserved.</p>
+    <p class="rights">&copy; 2024 Jackson Wiser. All rights reserved.</p>
 </div>
 </div>
     </div>
@@ -652,6 +681,19 @@
     document.addEventListener("click", function () {
         settingsPanel.classList.remove("open");
         settingsButton.setAttribute("aria-expanded", "false");
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        // Any code that needs to run after the DOM is fully loaded can go here
+const themeSelect = document.getElementById("theme");
+
+themeSelect.addEventListener("change", function () {
+    if (this.value === "dark") {
+        document.body.classList.add("dark-mode");
+    } else {
+        document.body.classList.remove("dark-mode");
+         }
+        });
     });
 </script>
 

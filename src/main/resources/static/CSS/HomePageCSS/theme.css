@@ -1,0 +1,132 @@
+/* ==========================================================
+   THEME TRANSITIONS
+   ========================================================== */
+
+body,
+.top-bar,
+.side-bar-container,
+.settings-block,
+.search-box,
+.bg-card-block {
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* ==========================================================
+   DARK MODE
+   ========================================================== */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+
+/* Top bar */
+body.dark-mode .top-bar {
+    background-color: #1f1f1f;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .top-bar-text {
+    color: #f5f5f5;
+}
+
+
+/* Sidebar */
+body.dark-mode .side-bar-container {
+    background-color: rgba(30, 30, 30, 0.92);
+    border-right-color: rgba(255, 255, 255, 0.15);
+}
+
+body.dark-mode .section-title {
+    color: #aaa;
+}
+
+
+/* Search bar */
+body.dark-mode .search-box {
+    background-color: #2a2a2a;
+    color: #f5f5f5;
+    border-color: #555;
+}
+
+body.dark-mode .search-box::placeholder {
+    color: #aaa;
+}
+
+
+/* Settings icon block */
+body.dark-mode .settings-block {
+    background-color: #2a2a2a;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Change black SVG icons to white */
+body.dark-mode .settings-icon,
+body.dark-mode .bell-icon,
+body.dark-mode .messages-icon {
+    filter: brightness(0) invert(1);
+}
+
+
+/* Setting cards */
+body.dark-mode .bg-card-block, 
+body.dark-mode .animation-card-block, 
+body.dark-mode .font-size-card-block, 
+body.dark-mode .settings-panel {
+    background-color: #252525;
+    color: #f5f5f5;
+}
+/* Exit settings icon */
+body.dark-mode .exit-settings-icon {
+    filter: brightness(0) invert(1);
+}
+/* Settings panel icon */
+body.dark-mode .settings-panel-icon{
+    filter: brightness(0) invert(1);
+}
+/* Setting descriptions */
+body.dark-mode .settings-description {
+    color: #b5b5b5;
+}
+body.dark-mode .education-card {
+    color: #000000;
+}
+body.dark-mode .section-title {
+    color: #030303;
+}
+/* Dropdown */
+body.dark-mode .settings-select {
+    background-color: #333;
+    color: #f5f5f5;
+    border-color: #555;
+}
+body.dark-mode .rights {
+    color: #000000;
+}
+
+
+/* Dividers */
+body.dark-mode .subtle-divider {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+/* Sidebar text and links */
+body.dark-mode .text-wrap,
+body.dark-mode .text-wrap-contact,
+body.dark-mode .text-wrap-location,
+body.dark-mode .text-wrap-skills,
+body.dark-mode .logo-name-container {
+    color: #f5f5f5;
+}
+
+body.dark-mode a {
+    color: #f5f5f5;
+}
