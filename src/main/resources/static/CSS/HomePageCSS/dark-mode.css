@@ -86,6 +86,7 @@ body.dark-mode .settings-panel {
 /* Exit settings icon */
 body.dark-mode .exit-settings-icon {
     filter: brightness(0) invert(1);
+    background-color: none;
 }
 /* Settings panel icon */
 body.dark-mode .settings-panel-icon{
@@ -95,11 +96,9 @@ body.dark-mode .settings-panel-icon{
 body.dark-mode .settings-description {
     color: #b5b5b5;
 }
-body.dark-mode .education-card {
-    color: #000000;
-}
+
 body.dark-mode .section-title {
-    color: #030303;
+    color: #ffffff;
 }
 /* Dropdown */
 body.dark-mode .settings-select {
@@ -108,7 +107,7 @@ body.dark-mode .settings-select {
     border-color: #555;
 }
 body.dark-mode .rights {
-    color: #000000;
+    color: #ffffff;
 }
 
 
@@ -116,8 +115,6 @@ body.dark-mode .rights {
 body.dark-mode .subtle-divider {
     background-color: rgba(255, 255, 255, 0.15);
 }
-
-
 /* Sidebar text and links */
 body.dark-mode .text-wrap,
 body.dark-mode .text-wrap-contact,
@@ -129,4 +126,62 @@ body.dark-mode .logo-name-container {
 
 body.dark-mode a {
     color: #f5f5f5;
+}
+/* Main content blocks */
+body.dark-mode .education-block, 
+body.dark-mode .experience-block,
+body.dark-mode .skills-block,
+body.dark-mode .projects-block,
+body.dark-mode .footer,
+body.dark-mode .contact-block,
+body.dark-mode .analytics-card {
+    background-color: #333;
+}
+/* Text to white for analytics cards */
+body.dark-mode .analytics-card h2,
+body.dark-mode .analytics-card p {
+    color: #ffffff;
+}
+/* Icons to white for analytics cards */
+body.dark-mode .github-icon,
+body.dark-mode .linkedin-icon,
+body.dark-mode .email-icon,
+body.dark-mode .folder-icon,
+body.dark-mode .repo-icon,
+body.dark-mode .code-icon,
+body.dark-mode .years-icon,
+body.dark-mode .commit-icon {
+    filter: brightness(0) invert(1);
+}
+/* Skills info text to white */
+body.dark-mode .skill-info,
+body.dark-mode .skill-info h3 {
+    color: #ffffff;
+}
+/* Education circle inner and circle inner text color to black */
+body.dark-mode .education-circle-inner,
+body.dark-mode .circle-inner {
+    color: #000000;
+}
+/* Left side bar icons and text to white */
+body.dark-mode .side-bar-icon,
+body.dark-mode .side-bar-text {
+    color: #ffffff;
+}
+/* Links in the sidebar to white */
+body.dark-mode .projects-link,
+body.dark-mode .resume-link,
+body.dark-mode .contact-link,
+body.dark-mode .linkedin-link,
+body.dark-mode .github-link,
+body.dark-mode .phone-link,
+body.dark-mode .location-icon {
+    filter: brightness(0) invert(1);
+}
+body.dark-mode .text-wrap-skills {
+    color: #ffffff;
+}
+/* Change PV logo to white in dark mode */
+body.dark-mode .PV-logo {
+    filter: brightness(0) invert(1);
 }

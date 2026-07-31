@@ -61,6 +61,8 @@
     top: 10px;
     left: 10px;
     padding-left: 10px;
+    
+
    
     
 }
@@ -246,4 +248,13 @@
 .bell-icon:hover, .messages-icon:hover {
     transform: scale(1.1);
     transition: transform 0.2s ease-in-out;
+}
+/* Adjust the margin for the bell and messages icons */
+.side-bar-container .side-bar-text {
+    color: black;
+    margin-left: 10px;
+}
+/* Adjust the margin for the contact text */
+.text-wrap-skills{
+    color: black;
 }
